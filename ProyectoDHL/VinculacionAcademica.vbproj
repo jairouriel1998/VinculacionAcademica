@@ -63,7 +63,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>diamante.ico</ApplicationIcon>
+    <ApplicationIcon>iconUnitec.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -288,6 +288,7 @@
   <ItemGroup>
     <Content Include="diamante.ico" />
     <None Include="icons\diamante1.png" />
+    <Content Include="iconUnitec.ico" />
     <Content Include="VinculacionAcademicaPT_TGU_DB.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

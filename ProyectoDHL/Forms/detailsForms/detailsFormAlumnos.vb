@@ -35,48 +35,63 @@ Public Class detailsFormAlumnos
 
     Private Sub prepareTextBox()
         If newAlumno Or editAlumno Then
-            txtCuenta.Enabled = True
-            txtNombre.Enabled = True
-            txtProyecto.Enabled = True
-            txtBeneficiado.Enabled = True
-            txtEvaluador.Enabled = True
-            txtHoras.Enabled = True
-            txtEvaluacion.Enabled = True
-            txtPeriodo.Enabled = True
-            txtValor.Enabled = True
-            txtAsignatura.Enabled = True
-            txtCarrera.Enabled = True
-            TextBox11.Enabled = True
+            txtCuenta.ReadOnly = False
+            txtNombre.ReadOnly = False
+            txtProyecto.ReadOnly = False
+            txtBeneficiado.ReadOnly = False
+            txtEvaluador.ReadOnly = False
+            txtHoras.ReadOnly = False
+            txtEvaluacion.ReadOnly = False
+            txtPeriodo.ReadOnly = False
+            txtValor.ReadOnly = False
+            txtAsignatura.ReadOnly = False
+            txtCarrera.ReadOnly = False
+            txtObservaciones.ReadOnly = False
         ElseIf viewAlumno Then
-            txtCuenta.Enabled = False
-            txtNombre.Enabled = False
-            txtProyecto.Enabled = False
-            txtBeneficiado.Enabled = False
-            txtEvaluador.Enabled = False
-            txtHoras.Enabled = False
-            txtEvaluacion.Enabled = False
-            txtPeriodo.Enabled = False
-            txtValor.Enabled = False
-            txtAsignatura.Enabled = False
-            txtCarrera.Enabled = False
-            TextBox11.Enabled = False
+            txtCuenta.ReadOnly = True
+            txtNombre.ReadOnly = True
+            txtProyecto.ReadOnly = True
+            txtBeneficiado.ReadOnly = True
+            txtEvaluador.ReadOnly = True
+            txtHoras.ReadOnly = True
+            txtEvaluacion.ReadOnly = True
+            txtPeriodo.ReadOnly = True
+            txtValor.ReadOnly = True
+            txtAsignatura.ReadOnly = True
+            txtCarrera.ReadOnly = True
+            txtObservaciones.ReadOnly = True
         End If
     End Sub
 
 
     Public Sub reciveData(alumnoData As eAlumnos)
-        txtCuenta.Text = alumnoData.Cuenta1
-        txtNombre.Text = alumnoData.NombreCompleto1
-        txtProyecto.Text = alumnoData.NombreProyecto1
-        txtBeneficiado.Text = alumnoData.OrganizacionBeneficiada1
-        txtEvaluador.Text = alumnoData.Catedratico1
-        txtHoras.Text = alumnoData.HorasInvertidas1
-        txtEvaluacion.Text = alumnoData.Evaluacion1
-        txtPeriodo.Text = alumnoData.Periodo1
-        txtValor.Text = alumnoData.ValorEconomico1
-        txtAsignatura.Text = alumnoData.Asignatura1
-        txtCarrera.Text = alumnoData.Carrera1
-        TextBox11.Text = alumnoData.Observaciones1
+        If alumnoData.Id1 <> 0 Then
+            txtCuenta.Text = alumnoData.Cuenta1
+            txtNombre.Text = alumnoData.NombreCompleto1
+            txtProyecto.Text = alumnoData.NombreProyecto1
+            txtBeneficiado.Text = alumnoData.OrganizacionBeneficiada1
+            txtEvaluador.Text = alumnoData.Catedratico1
+            txtHoras.Text = alumnoData.HorasInvertidas1
+            txtEvaluacion.Text = alumnoData.Evaluacion1
+            txtPeriodo.Text = alumnoData.Periodo1
+            txtValor.Text = alumnoData.ValorEconomico1
+            txtAsignatura.Text = alumnoData.Asignatura1
+            txtCarrera.Text = alumnoData.Carrera1
+            txtObservaciones.Text = alumnoData.Observaciones1
+        Else
+            txtCuenta.Text = ""
+            txtNombre.Text = ""
+            txtProyecto.Text = ""
+            txtBeneficiado.Text = ""
+            txtEvaluador.Text = ""
+            txtHoras.Text = ""
+            txtEvaluacion.Text = ""
+            txtPeriodo.Text = ""
+            txtValor.Text = ""
+            txtAsignatura.Text = ""
+            txtCarrera.Text = ""
+            txtObservaciones.Text = ""
+        End If
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click

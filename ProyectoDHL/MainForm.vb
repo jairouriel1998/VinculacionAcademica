@@ -68,16 +68,12 @@ Public Class MainForm
             Me.formsPanel.Controls.RemoveAt(0)
         End If
         Dim sonFormObject As Form = TryCast(sonForm, Form)
-            sonFormObject.TopLevel = False
-            sonFormObject.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-            sonFormObject.Dock = DockStyle.Fill
-            Me.formsPanel.Controls.Add(sonFormObject)
-            Me.formsPanel.Tag = sonFormObject
+        sonFormObject.TopLevel = False
+        sonFormObject.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        sonFormObject.Dock = DockStyle.Fill
+        Me.formsPanel.Controls.Add(sonFormObject)
+        Me.formsPanel.Tag = sonFormObject
         sonFormObject.Show()
-    End Sub
-
-    Private Sub btnFormAbout_Click(sender As Object, e As EventArgs) Handles btnFormAbout.Click
-        openFormInPanel(New frmAbout)
     End Sub
 
     Private Sub formsPanel_MouseHover(sender As Object, e As EventArgs) Handles formsPanel.MouseHover
@@ -98,5 +94,9 @@ Public Class MainForm
 
     Public Sub refreshConsumersData()
         openFormInPanel(New tableFormConsumers)
+    End Sub
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+        openFormInPanel(New frmAbout)
     End Sub
 End Class

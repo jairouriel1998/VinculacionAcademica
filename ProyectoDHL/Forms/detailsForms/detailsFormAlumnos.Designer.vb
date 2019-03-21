@@ -52,7 +52,7 @@ Partial Class detailsFormAlumnos
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtCarrera = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -413,17 +413,17 @@ Partial Class detailsFormAlumnos
         Me.Label12.TabIndex = 28
         Me.Label12.Text = "Carrera"
         '
-        'TextBox11
+        'txtObservaciones
         '
-        Me.TextBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.ForeColor = System.Drawing.Color.MediumTurquoise
-        Me.TextBox11.Location = New System.Drawing.Point(538, 291)
-        Me.TextBox11.Multiline = True
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(433, 195)
-        Me.TextBox11.TabIndex = 31
+        Me.txtObservaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtObservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtObservaciones.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtObservaciones.Location = New System.Drawing.Point(538, 291)
+        Me.txtObservaciones.Multiline = True
+        Me.txtObservaciones.Name = "txtObservaciones"
+        Me.txtObservaciones.Size = New System.Drawing.Size(433, 195)
+        Me.txtObservaciones.TabIndex = 31
         '
         'Label13
         '
@@ -442,7 +442,7 @@ Partial Class detailsFormAlumnos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 568)
-        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.txtObservaciones)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtCarrera)
         Me.Controls.Add(Me.Label12)
@@ -509,6 +509,6 @@ Partial Class detailsFormAlumnos
     Friend WithEvents Label11 As Label
     Friend WithEvents txtCarrera As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtObservaciones As TextBox
     Friend WithEvents Label13 As Label
 End Class

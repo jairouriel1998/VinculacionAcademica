@@ -39,26 +39,51 @@
     Private Sub btnViewDetailsEmployee_Click(sender As Object, e As EventArgs) Handles btnViewDetailsEmployee.Click
         Dim detailsAlumno = New detailsFormAlumnos
         detailsAlumno.prepareForm(False, False, True)
-        detailsAlumno.reciveData(sendData())
-        detailsAlumno.Show()
+        Dim datos As eAlumnos = New eAlumnos
+        datos = sendData()
+        If datos.Id1 <> 0 Then
+            detailsAlumno.reciveData(datos)
+            detailsAlumno.Show()
+        Else
+            Dim alerta As frmAlerta = New frmAlerta
+            alerta.setText("No hay nada que mostrar")
+            alerta.Show()
+        End If
     End Sub
 
     Function sendData() As eAlumnos
         Dim alumnoData As New eAlumnos
-        alumnoData.Id1 = datalistAlumnos.SelectedCells.Item(0).Value
-        alumnoData.Cuenta1 = datalistAlumnos.SelectedCells.Item(1).Value & ""
-        alumnoData.NombreCompleto1 = datalistAlumnos.SelectedCells.Item(2).Value & ""
-        alumnoData.NombreProyecto1 = datalistAlumnos.SelectedCells.Item(3).Value & ""
-        alumnoData.OrganizacionBeneficiada1 = datalistAlumnos.SelectedCells.Item(4).Value & ""
-        alumnoData.Catedratico1 = datalistAlumnos.SelectedCells.Item(5).Value & ""
-        alumnoData.HorasInvertidas1 = datalistAlumnos.SelectedCells.Item(6).Value + 0
-        alumnoData.Evaluacion1 = datalistAlumnos.SelectedCells.Item(7).Value + 0
-        alumnoData.Periodo1 = datalistAlumnos.SelectedCells.Item(8).Value & ""
-        alumnoData.ValorEconomico1 = datalistAlumnos.SelectedCells.Item(9).Value + 0
-        alumnoData.Asignatura1 = datalistAlumnos.SelectedCells.Item(10).Value & ""
-        alumnoData.Carrera1 = datalistAlumnos.SelectedCells.Item(11).Value & ""
-        alumnoData.Observaciones1 = datalistAlumnos.SelectedCells.Item(12).Value & ""
-        alumnoData.Activo1 = datalistAlumnos.SelectedCells.Item(13).Value
+        Try
+            alumnoData.Id1 = datalistAlumnos.SelectedCells.Item(0).Value
+            alumnoData.Cuenta1 = datalistAlumnos.SelectedCells.Item(1).Value & ""
+            alumnoData.NombreCompleto1 = datalistAlumnos.SelectedCells.Item(2).Value & ""
+            alumnoData.NombreProyecto1 = datalistAlumnos.SelectedCells.Item(3).Value & ""
+            alumnoData.OrganizacionBeneficiada1 = datalistAlumnos.SelectedCells.Item(4).Value & ""
+            alumnoData.Catedratico1 = datalistAlumnos.SelectedCells.Item(5).Value & ""
+            alumnoData.HorasInvertidas1 = datalistAlumnos.SelectedCells.Item(6).Value + 0
+            alumnoData.Evaluacion1 = datalistAlumnos.SelectedCells.Item(7).Value + 0
+            alumnoData.Periodo1 = datalistAlumnos.SelectedCells.Item(8).Value & ""
+            alumnoData.ValorEconomico1 = datalistAlumnos.SelectedCells.Item(9).Value + 0
+            alumnoData.Asignatura1 = datalistAlumnos.SelectedCells.Item(10).Value & ""
+            alumnoData.Carrera1 = datalistAlumnos.SelectedCells.Item(11).Value & ""
+            alumnoData.Observaciones1 = datalistAlumnos.SelectedCells.Item(12).Value & ""
+            alumnoData.Activo1 = datalistAlumnos.SelectedCells.Item(13).Value
+        Catch exepcion As Exception
+            alumnoData.Id1 = 0
+            alumnoData.Cuenta1 = ""
+            alumnoData.NombreCompleto1 = ""
+            alumnoData.NombreProyecto1 = ""
+            alumnoData.OrganizacionBeneficiada1 = ""
+            alumnoData.Catedratico1 = ""
+            alumnoData.HorasInvertidas1 = 0
+            alumnoData.Evaluacion1 = 0
+            alumnoData.Periodo1 = ""
+            alumnoData.ValorEconomico1 = 0
+            alumnoData.Asignatura1 = ""
+            alumnoData.Carrera1 = ""
+            alumnoData.Observaciones1 = ""
+            alumnoData.Activo1 = False
+        End Try
         Return alumnoData
     End Function
 
@@ -108,6 +133,7 @@
                 Next
                 labVinculadas.Visible = True
                 txtVinculadas.Visible = True
+                txtVinculadas.ReadOnly = True
                 txtVinculadas.Text = horasVinculadas
             End If
         Else
@@ -116,12 +142,12 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        refreshData()
         btnClear.Visible = False
         txtBusqueda.Text = ""
         txtVinculadas.Text = ""
         txtVinculadas.Visible = False
         labVinculadas.Visible = False
+        refreshData()
     End Sub
 
 
