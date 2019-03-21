@@ -36,12 +36,12 @@ Partial Class MainForm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.menuPanel = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnAbout = New System.Windows.Forms.Button()
         Me.btnFormEmpleados = New System.Windows.Forms.Button()
         Me.btnFormClientes = New System.Windows.Forms.Button()
         Me.picboxLogo = New System.Windows.Forms.PictureBox()
         Me.btnAcordeon = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnAbout = New System.Windows.Forms.Button()
         Me.superiorPanel.SuspendLayout()
         Me.menuPanel.SuspendLayout()
         CType(Me.picboxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,11 +83,11 @@ Partial Class MainForm
         'Label1
         '
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 40)
+        Me.Label1.Size = New System.Drawing.Size(329, 40)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "  Vinculación Académica"
         '
@@ -173,6 +173,7 @@ Partial Class MainForm
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(5, 38)
         Me.Panel3.TabIndex = 4
+        Me.Panel3.Visible = False
         '
         'menuPanel
         '
@@ -191,6 +192,32 @@ Partial Class MainForm
         Me.menuPanel.Size = New System.Drawing.Size(220, 660)
         Me.menuPanel.TabIndex = 1
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel1.Location = New System.Drawing.Point(0, 310)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(5, 38)
+        Me.Panel1.TabIndex = 8
+        '
+        'btnAbout
+        '
+        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAbout.FlatAppearance.BorderSize = 0
+        Me.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbout.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbout.ForeColor = System.Drawing.Color.White
+        Me.btnAbout.Image = Global.ProyectoDHL.My.Resources.Resources.empleados
+        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Location = New System.Drawing.Point(0, 310)
+        Me.btnAbout.Name = "btnAbout"
+        Me.btnAbout.Size = New System.Drawing.Size(220, 40)
+        Me.btnAbout.TabIndex = 9
+        Me.btnAbout.Text = "Acerca de"
+        Me.btnAbout.UseVisualStyleBackColor = True
+        '
         'btnFormEmpleados
         '
         Me.btnFormEmpleados.Cursor = System.Windows.Forms.Cursors.Hand
@@ -198,7 +225,7 @@ Partial Class MainForm
         Me.btnFormEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnFormEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnFormEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFormEmpleados.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFormEmpleados.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFormEmpleados.ForeColor = System.Drawing.Color.White
         Me.btnFormEmpleados.Image = Global.ProyectoDHL.My.Resources.Resources.clientes
         Me.btnFormEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -217,7 +244,7 @@ Partial Class MainForm
         Me.btnFormClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnFormClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnFormClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFormClientes.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFormClientes.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFormClientes.ForeColor = System.Drawing.Color.White
         Me.btnFormClientes.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_Restaurar
         Me.btnFormClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -227,6 +254,7 @@ Partial Class MainForm
         Me.btnFormClientes.TabIndex = 6
         Me.btnFormClientes.Text = "Papelera"
         Me.btnFormClientes.UseVisualStyleBackColor = True
+        Me.btnFormClientes.Visible = False
         '
         'picboxLogo
         '
@@ -249,32 +277,6 @@ Partial Class MainForm
         Me.btnAcordeon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnAcordeon.TabIndex = 0
         Me.btnAcordeon.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.Location = New System.Drawing.Point(0, 310)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(5, 38)
-        Me.Panel1.TabIndex = 8
-        '
-        'btnAbout
-        '
-        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAbout.FlatAppearance.BorderSize = 0
-        Me.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAbout.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAbout.ForeColor = System.Drawing.Color.White
-        Me.btnAbout.Image = Global.ProyectoDHL.My.Resources.Resources.empleados
-        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAbout.Location = New System.Drawing.Point(0, 310)
-        Me.btnAbout.Name = "btnAbout"
-        Me.btnAbout.Size = New System.Drawing.Size(220, 40)
-        Me.btnAbout.TabIndex = 9
-        Me.btnAbout.Text = "About"
-        Me.btnAbout.UseVisualStyleBackColor = True
         '
         'MainForm
         '

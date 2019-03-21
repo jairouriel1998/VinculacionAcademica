@@ -54,12 +54,14 @@ Partial Class detailsFormAlumnos
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnExit)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -71,13 +73,13 @@ Partial Class detailsFormAlumnos
         '
         Me.Label1.BackColor = System.Drawing.Color.SteelBlue
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Impact", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1002, 48)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "ALUMNO"
+        Me.Label1.Text = "DETALLES DE REGISTRO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
@@ -99,7 +101,7 @@ Partial Class detailsFormAlumnos
         Me.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.White
         Me.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnClose.Location = New System.Drawing.Point(894, 3)
@@ -116,7 +118,7 @@ Partial Class detailsFormAlumnos
         Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(894, 3)
@@ -133,7 +135,7 @@ Partial Class detailsFormAlumnos
         Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnClear.Location = New System.Drawing.Point(801, 3)
@@ -150,7 +152,7 @@ Partial Class detailsFormAlumnos
         Me.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSave.Location = New System.Drawing.Point(699, 3)
@@ -163,11 +165,11 @@ Partial Class detailsFormAlumnos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(24, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 20)
+        Me.Label3.Size = New System.Drawing.Size(55, 20)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Cuenta"
         '
@@ -175,11 +177,11 @@ Partial Class detailsFormAlumnos
         '
         Me.txtCuenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCuenta.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtCuenta.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCuenta.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtCuenta.Location = New System.Drawing.Point(117, 70)
         Me.txtCuenta.Name = "txtCuenta"
-        Me.txtCuenta.Size = New System.Drawing.Size(397, 19)
+        Me.txtCuenta.Size = New System.Drawing.Size(397, 20)
         Me.txtCuenta.TabIndex = 9
         Me.txtCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -187,22 +189,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtNombre.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtNombre.Location = New System.Drawing.Point(117, 111)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(397, 19)
+        Me.txtNombre.Size = New System.Drawing.Size(397, 20)
         Me.txtNombre.TabIndex = 11
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(24, 111)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 20)
+        Me.Label2.Size = New System.Drawing.Size(56, 20)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Alumno"
         '
@@ -210,22 +212,23 @@ Partial Class detailsFormAlumnos
         '
         Me.txtProyecto.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtProyecto.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtProyecto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProyecto.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtProyecto.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProyecto.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtProyecto.Location = New System.Drawing.Point(117, 154)
         Me.txtProyecto.Multiline = True
         Me.txtProyecto.Name = "txtProyecto"
         Me.txtProyecto.Size = New System.Drawing.Size(397, 52)
         Me.txtProyecto.TabIndex = 13
+        Me.txtProyecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(24, 153)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 20)
+        Me.Label4.Size = New System.Drawing.Size(67, 20)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Proyecto"
         '
@@ -233,22 +236,23 @@ Partial Class detailsFormAlumnos
         '
         Me.txtBeneficiado.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtBeneficiado.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBeneficiado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBeneficiado.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtBeneficiado.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBeneficiado.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtBeneficiado.Location = New System.Drawing.Point(116, 231)
         Me.txtBeneficiado.Multiline = True
         Me.txtBeneficiado.Name = "txtBeneficiado"
         Me.txtBeneficiado.Size = New System.Drawing.Size(397, 49)
         Me.txtBeneficiado.TabIndex = 15
+        Me.txtBeneficiado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(24, 231)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 20)
+        Me.Label5.Size = New System.Drawing.Size(87, 20)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Beneficiado"
         '
@@ -256,22 +260,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtEvaluador.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtEvaluador.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEvaluador.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEvaluador.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtEvaluador.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEvaluador.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtEvaluador.Location = New System.Drawing.Point(117, 302)
         Me.txtEvaluador.Name = "txtEvaluador"
-        Me.txtEvaluador.Size = New System.Drawing.Size(397, 19)
+        Me.txtEvaluador.Size = New System.Drawing.Size(397, 20)
         Me.txtEvaluador.TabIndex = 17
         Me.txtEvaluador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(24, 301)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 20)
+        Me.Label6.Size = New System.Drawing.Size(74, 20)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Evaluador"
         '
@@ -279,22 +283,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtHoras.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtHoras.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtHoras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoras.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtHoras.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoras.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtHoras.Location = New System.Drawing.Point(116, 340)
         Me.txtHoras.Name = "txtHoras"
-        Me.txtHoras.Size = New System.Drawing.Size(397, 19)
+        Me.txtHoras.Size = New System.Drawing.Size(397, 20)
         Me.txtHoras.TabIndex = 19
         Me.txtHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(24, 339)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 20)
+        Me.Label7.Size = New System.Drawing.Size(48, 20)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Horas"
         '
@@ -302,22 +306,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtEvaluacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtEvaluacion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEvaluacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEvaluacion.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtEvaluacion.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEvaluacion.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtEvaluacion.Location = New System.Drawing.Point(116, 384)
         Me.txtEvaluacion.Name = "txtEvaluacion"
-        Me.txtEvaluacion.Size = New System.Drawing.Size(397, 19)
+        Me.txtEvaluacion.Size = New System.Drawing.Size(397, 20)
         Me.txtEvaluacion.TabIndex = 21
         Me.txtEvaluacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(24, 384)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 20)
+        Me.Label8.Size = New System.Drawing.Size(80, 20)
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "Evaluacion"
         '
@@ -325,22 +329,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtPeriodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPeriodo.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtPeriodo.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPeriodo.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtPeriodo.Location = New System.Drawing.Point(116, 428)
         Me.txtPeriodo.Name = "txtPeriodo"
-        Me.txtPeriodo.Size = New System.Drawing.Size(397, 19)
+        Me.txtPeriodo.Size = New System.Drawing.Size(397, 20)
         Me.txtPeriodo.TabIndex = 23
         Me.txtPeriodo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(24, 427)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.Size = New System.Drawing.Size(59, 20)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Periodo"
         '
@@ -348,22 +352,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtValor.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtValor.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtValor.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtValor.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtValor.Location = New System.Drawing.Point(116, 467)
         Me.txtValor.Name = "txtValor"
-        Me.txtValor.Size = New System.Drawing.Size(397, 19)
+        Me.txtValor.Size = New System.Drawing.Size(397, 20)
         Me.txtValor.TabIndex = 25
         Me.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label10.Location = New System.Drawing.Point(24, 466)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(46, 20)
+        Me.Label10.Size = New System.Drawing.Size(42, 20)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Valor"
         '
@@ -371,22 +375,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtAsignatura.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtAsignatura.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAsignatura.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAsignatura.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtAsignatura.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAsignatura.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtAsignatura.Location = New System.Drawing.Point(627, 110)
         Me.txtAsignatura.Name = "txtAsignatura"
-        Me.txtAsignatura.Size = New System.Drawing.Size(344, 19)
+        Me.txtAsignatura.Size = New System.Drawing.Size(344, 20)
         Me.txtAsignatura.TabIndex = 27
         Me.txtAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(534, 110)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(86, 20)
+        Me.Label11.Size = New System.Drawing.Size(79, 20)
         Me.Label11.TabIndex = 26
         Me.Label11.Text = "Asignatura"
         '
@@ -394,22 +398,22 @@ Partial Class detailsFormAlumnos
         '
         Me.txtCarrera.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtCarrera.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCarrera.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCarrera.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtCarrera.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCarrera.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtCarrera.Location = New System.Drawing.Point(627, 168)
         Me.txtCarrera.Name = "txtCarrera"
-        Me.txtCarrera.Size = New System.Drawing.Size(344, 19)
+        Me.txtCarrera.Size = New System.Drawing.Size(344, 20)
         Me.txtCarrera.TabIndex = 29
         Me.txtCarrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label12.Location = New System.Drawing.Point(534, 168)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(62, 20)
+        Me.Label12.Size = New System.Drawing.Size(60, 20)
         Me.Label12.TabIndex = 28
         Me.Label12.Text = "Carrera"
         '
@@ -417,8 +421,8 @@ Partial Class detailsFormAlumnos
         '
         Me.txtObservaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtObservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservaciones.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtObservaciones.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtObservaciones.ForeColor = System.Drawing.Color.PaleTurquoise
         Me.txtObservaciones.Location = New System.Drawing.Point(538, 291)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
@@ -428,13 +432,31 @@ Partial Class detailsFormAlumnos
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label13.Location = New System.Drawing.Point(534, 249)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(114, 20)
+        Me.Label13.Size = New System.Drawing.Size(108, 20)
         Me.Label13.TabIndex = 30
         Me.Label13.Text = "Observaciones"
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnExit.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnExit.Location = New System.Drawing.Point(953, 0)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(49, 48)
+        Me.btnExit.TabIndex = 6
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'detailsFormAlumnos
         '
@@ -511,4 +533,5 @@ Partial Class detailsFormAlumnos
     Friend WithEvents Label12 As Label
     Friend WithEvents txtObservaciones As TextBox
     Friend WithEvents Label13 As Label
+    Friend WithEvents btnExit As Button
 End Class

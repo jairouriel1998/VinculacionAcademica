@@ -28,17 +28,19 @@ Partial Class frmAlerta
         Me.labInfo = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -47,11 +49,12 @@ Partial Class frmAlerta
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.labInfo)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 48)
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(363, 255)
+        Me.Panel3.Size = New System.Drawing.Size(363, 303)
         Me.Panel3.TabIndex = 9
         '
         'labInfo
@@ -61,7 +64,7 @@ Partial Class frmAlerta
         Me.labInfo.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.labInfo.Location = New System.Drawing.Point(0, 0)
         Me.labInfo.Name = "labInfo"
-        Me.labInfo.Size = New System.Drawing.Size(363, 255)
+        Me.labInfo.Size = New System.Drawing.Size(363, 303)
         Me.labInfo.TabIndex = 0
         Me.labInfo.Text = "Informacion Aqui"
         Me.labInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -92,18 +95,46 @@ Partial Class frmAlerta
         Me.btnClose.Text = "Cerrar"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.btnExit)
+        Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(363, 43)
+        Me.Panel4.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(363, 48)
-        Me.Label1.TabIndex = 6
+        Me.Label1.Size = New System.Drawing.Size(363, 43)
+        Me.Label1.TabIndex = 7
         Me.Label1.Text = "AVISO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnExit.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnExit.Location = New System.Drawing.Point(314, 0)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(49, 43)
+        Me.btnExit.TabIndex = 8
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'frmAlerta
         '
@@ -122,6 +153,7 @@ Partial Class frmAlerta
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -130,6 +162,8 @@ Partial Class frmAlerta
     Friend WithEvents Panel3 As Panel
     Friend WithEvents labInfo As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnClose As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnExit As Button
 End Class

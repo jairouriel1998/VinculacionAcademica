@@ -27,10 +27,10 @@ Partial Class frmAbout
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -40,15 +40,13 @@ Partial Class frmAbout
         '
         'Label2
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Monotype Corsiva", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label2.Location = New System.Drawing.Point(82, 98)
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(682, 326)
+        Me.Label2.Size = New System.Drawing.Size(822, 541)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = resources.GetString("Label2.Text")
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -77,46 +75,14 @@ Partial Class frmAbout
         Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.Label1.Font = New System.Drawing.Font("Impact", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Honeydew
         Me.Label1.Location = New System.Drawing.Point(0, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(710, 43)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "INFORMACIÓN DE PROYECTO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 417)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(822, 124)
-        Me.Panel2.TabIndex = 6
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox2.Image = Global.ProyectoDHL.My.Resources.Resources.diamante
-        Me.PictureBox2.Location = New System.Drawing.Point(662, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(160, 124)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.ProyectoDHL.My.Resources.Resources.logo_ceutec_blanco
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(316, 124)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
@@ -132,6 +98,38 @@ Partial Class frmAbout
         Me.Button1.Size = New System.Drawing.Size(68, 59)
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.PictureBox2)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 426)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(822, 115)
+        Me.Panel2.TabIndex = 6
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox2.Image = Global.ProyectoDHL.My.Resources.Resources.diamante
+        Me.PictureBox2.Location = New System.Drawing.Point(662, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(160, 115)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = Global.ProyectoDHL.My.Resources.Resources.logo_ceutec_blanco
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(316, 115)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'frmAbout
         '

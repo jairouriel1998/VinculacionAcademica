@@ -16,3 +16,4 @@ C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\Vinculacio
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.xml
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.pdb
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.vbprojAssemblyReference.cache
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.frmAlerta.resources

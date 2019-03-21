@@ -148,7 +148,18 @@
         txtVinculadas.Visible = False
         labVinculadas.Visible = False
         refreshData()
+
     End Sub
 
+    Private Sub datalistAlumnos_SelectionChanged(sender As Object, e As EventArgs) Handles datalistAlumnos.SelectionChanged
+        If datalistAlumnos.Rows.Count = 0 Then
+            txtBusqueda.Text = ""
+        Else
+            Try
+                txtBusqueda.Text = datalistAlumnos.SelectedCells.Item(1).Value
+            Catch ex As Exception
 
+            End Try
+        End If
+    End Sub
 End Class
