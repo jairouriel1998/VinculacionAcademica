@@ -23,25 +23,25 @@ Partial Class tableFormAlumnos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnExitForm = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnDeleteEmployee = New System.Windows.Forms.Button()
-        Me.btnEditEmployee = New System.Windows.Forms.Button()
-        Me.btnAddNewEmployee = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBusqueda = New System.Windows.Forms.TextBox()
+        Me.Busqueda = New System.Windows.Forms.Label()
+        Me.btnDeleteAlumno = New System.Windows.Forms.Button()
+        Me.btnEditAlumno = New System.Windows.Forms.Button()
+        Me.btnAddNewAlumno = New System.Windows.Forms.Button()
         Me.btnViewDetailsEmployee = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.datalistAlumnos = New System.Windows.Forms.DataGridView()
-        Me.Busqueda = New System.Windows.Forms.Label()
-        Me.txtBusqueda = New System.Windows.Forms.TextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CuentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreCompletoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,7 +59,9 @@ Partial Class tableFormAlumnos
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
         Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
-        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnExitForm = New System.Windows.Forms.Button()
+        Me.txtVinculadas = New System.Windows.Forms.TextBox()
+        Me.labVinculadas = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -77,21 +79,6 @@ Partial Class tableFormAlumnos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(833, 55)
         Me.Panel1.TabIndex = 0
-        '
-        'btnExitForm
-        '
-        Me.btnExitForm.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExitForm.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnExitForm.FlatAppearance.BorderSize = 0
-        Me.btnExitForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExitForm.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnExitForm.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnExitForm.Location = New System.Drawing.Point(0, 0)
-        Me.btnExitForm.Name = "btnExitForm"
-        Me.btnExitForm.Size = New System.Drawing.Size(68, 55)
-        Me.btnExitForm.TabIndex = 3
-        Me.btnExitForm.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -117,13 +104,15 @@ Partial Class tableFormAlumnos
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.txtVinculadas)
         Me.Panel3.Controls.Add(Me.btnClear)
+        Me.Panel3.Controls.Add(Me.labVinculadas)
         Me.Panel3.Controls.Add(Me.btnBuscar)
         Me.Panel3.Controls.Add(Me.txtBusqueda)
         Me.Panel3.Controls.Add(Me.Busqueda)
-        Me.Panel3.Controls.Add(Me.btnDeleteEmployee)
-        Me.Panel3.Controls.Add(Me.btnEditEmployee)
-        Me.Panel3.Controls.Add(Me.btnAddNewEmployee)
+        Me.Panel3.Controls.Add(Me.btnDeleteAlumno)
+        Me.Panel3.Controls.Add(Me.btnEditAlumno)
+        Me.Panel3.Controls.Add(Me.btnAddNewAlumno)
         Me.Panel3.Controls.Add(Me.btnViewDetailsEmployee)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel3.Location = New System.Drawing.Point(633, 55)
@@ -131,56 +120,114 @@ Partial Class tableFormAlumnos
         Me.Panel3.Size = New System.Drawing.Size(200, 478)
         Me.Panel3.TabIndex = 2
         '
-        'btnDeleteEmployee
+        'btnClear
         '
-        Me.btnDeleteEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDeleteEmployee.FlatAppearance.BorderSize = 0
-        Me.btnDeleteEmployee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnDeleteEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteEmployee.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDeleteEmployee.Location = New System.Drawing.Point(0, 345)
-        Me.btnDeleteEmployee.Name = "btnDeleteEmployee"
-        Me.btnDeleteEmployee.Size = New System.Drawing.Size(200, 40)
-        Me.btnDeleteEmployee.TabIndex = 7
-        Me.btnDeleteEmployee.Text = "Eliminar Empleado"
-        Me.btnDeleteEmployee.UseVisualStyleBackColor = True
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClear.Location = New System.Drawing.Point(27, 76)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(80, 31)
+        Me.btnClear.TabIndex = 32
+        Me.btnClear.Text = "Ver todo"
+        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.Visible = False
         '
-        'btnEditEmployee
+        'btnBuscar
         '
-        Me.btnEditEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditEmployee.FlatAppearance.BorderSize = 0
-        Me.btnEditEmployee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnEditEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnEditEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditEmployee.ForeColor = System.Drawing.Color.White
-        Me.btnEditEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditEmployee.Location = New System.Drawing.Point(0, 278)
-        Me.btnEditEmployee.Name = "btnEditEmployee"
-        Me.btnEditEmployee.Size = New System.Drawing.Size(200, 40)
-        Me.btnEditEmployee.TabIndex = 6
-        Me.btnEditEmployee.Text = "Editar Empleado"
-        Me.btnEditEmployee.UseVisualStyleBackColor = True
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(113, 76)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 31)
+        Me.btnBuscar.TabIndex = 31
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'btnAddNewEmployee
+        'txtBusqueda
         '
-        Me.btnAddNewEmployee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddNewEmployee.FlatAppearance.BorderSize = 0
-        Me.btnAddNewEmployee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnAddNewEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnAddNewEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddNewEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewEmployee.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddNewEmployee.Location = New System.Drawing.Point(0, 210)
-        Me.btnAddNewEmployee.Name = "btnAddNewEmployee"
-        Me.btnAddNewEmployee.Size = New System.Drawing.Size(200, 40)
-        Me.btnAddNewEmployee.TabIndex = 5
-        Me.btnAddNewEmployee.Text = "Nuevo Empleado"
-        Me.btnAddNewEmployee.UseVisualStyleBackColor = True
+        Me.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBusqueda.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtBusqueda.Location = New System.Drawing.Point(27, 51)
+        Me.txtBusqueda.Name = "txtBusqueda"
+        Me.txtBusqueda.Size = New System.Drawing.Size(161, 19)
+        Me.txtBusqueda.TabIndex = 30
+        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Busqueda
+        '
+        Me.Busqueda.AutoSize = True
+        Me.Busqueda.Font = New System.Drawing.Font("Minion Pro SmBd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Busqueda.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Busqueda.Location = New System.Drawing.Point(6, 26)
+        Me.Busqueda.Name = "Busqueda"
+        Me.Busqueda.Size = New System.Drawing.Size(130, 22)
+        Me.Busqueda.TabIndex = 8
+        Me.Busqueda.Text = "Buscar por cuenta"
+        '
+        'btnDeleteAlumno
+        '
+        Me.btnDeleteAlumno.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDeleteAlumno.FlatAppearance.BorderSize = 0
+        Me.btnDeleteAlumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnDeleteAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnDeleteAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteAlumno.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteAlumno.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDeleteAlumno.Location = New System.Drawing.Point(0, 345)
+        Me.btnDeleteAlumno.Name = "btnDeleteAlumno"
+        Me.btnDeleteAlumno.Size = New System.Drawing.Size(200, 40)
+        Me.btnDeleteAlumno.TabIndex = 7
+        Me.btnDeleteAlumno.Text = "Eliminar Registro"
+        Me.btnDeleteAlumno.UseVisualStyleBackColor = True
+        '
+        'btnEditAlumno
+        '
+        Me.btnEditAlumno.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEditAlumno.FlatAppearance.BorderSize = 0
+        Me.btnEditAlumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnEditAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnEditAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditAlumno.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditAlumno.ForeColor = System.Drawing.Color.White
+        Me.btnEditAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditAlumno.Location = New System.Drawing.Point(0, 278)
+        Me.btnEditAlumno.Name = "btnEditAlumno"
+        Me.btnEditAlumno.Size = New System.Drawing.Size(200, 40)
+        Me.btnEditAlumno.TabIndex = 6
+        Me.btnEditAlumno.Text = "Editar Registro"
+        Me.btnEditAlumno.UseVisualStyleBackColor = True
+        '
+        'btnAddNewAlumno
+        '
+        Me.btnAddNewAlumno.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddNewAlumno.FlatAppearance.BorderSize = 0
+        Me.btnAddNewAlumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnAddNewAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnAddNewAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddNewAlumno.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewAlumno.ForeColor = System.Drawing.Color.White
+        Me.btnAddNewAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddNewAlumno.Location = New System.Drawing.Point(0, 210)
+        Me.btnAddNewAlumno.Name = "btnAddNewAlumno"
+        Me.btnAddNewAlumno.Size = New System.Drawing.Size(200, 40)
+        Me.btnAddNewAlumno.TabIndex = 5
+        Me.btnAddNewAlumno.Text = "Nuevo Registro"
+        Me.btnAddNewAlumno.UseVisualStyleBackColor = True
         '
         'btnViewDetailsEmployee
         '
@@ -210,58 +257,56 @@ Partial Class tableFormAlumnos
         '
         'datalistAlumnos
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        Me.datalistAlumnos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.datalistAlumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        Me.datalistAlumnos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.datalistAlumnos.AutoGenerateColumns = False
         Me.datalistAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.datalistAlumnos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.datalistAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.datalistAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.datalistAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datalistAlumnos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CuentaDataGridViewTextBoxColumn, Me.NombreCompletoDataGridViewTextBoxColumn, Me.NombreDelProyectoDataGridViewTextBoxColumn, Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn, Me.CatedraticoDataGridViewTextBoxColumn, Me.HorasInvertidasDataGridViewTextBoxColumn, Me.EvaluacionDataGridViewTextBoxColumn, Me.PeriodoDataGridViewTextBoxColumn, Me.ValorEconomicoDataGridViewTextBoxColumn, Me.AsignaturaDataGridViewTextBoxColumn, Me.CarreraDataGridViewTextBoxColumn, Me.ObservacionesDataGridViewTextBoxColumn, Me.ActivoDataGridViewCheckBoxColumn})
         Me.datalistAlumnos.DataSource = Me.AlumnosBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.DefaultCellStyle = DataGridViewCellStyle13
+        Me.datalistAlumnos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datalistAlumnos.Location = New System.Drawing.Point(0, 0)
         Me.datalistAlumnos.MultiSelect = False
         Me.datalistAlumnos.Name = "datalistAlumnos"
         Me.datalistAlumnos.ReadOnly = True
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
-        Me.datalistAlumnos.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
+        Me.datalistAlumnos.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -271,46 +316,6 @@ Partial Class tableFormAlumnos
         Me.datalistAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.datalistAlumnos.Size = New System.Drawing.Size(633, 478)
         Me.datalistAlumnos.TabIndex = 0
-        '
-        'Busqueda
-        '
-        Me.Busqueda.AutoSize = True
-        Me.Busqueda.Font = New System.Drawing.Font("Minion Pro SmBd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Busqueda.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Busqueda.Location = New System.Drawing.Point(6, 26)
-        Me.Busqueda.Name = "Busqueda"
-        Me.Busqueda.Size = New System.Drawing.Size(130, 22)
-        Me.Busqueda.TabIndex = 8
-        Me.Busqueda.Text = "Buscar por cuenta"
-        '
-        'txtBusqueda
-        '
-        Me.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBusqueda.ForeColor = System.Drawing.Color.MediumTurquoise
-        Me.txtBusqueda.Location = New System.Drawing.Point(27, 51)
-        Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(161, 19)
-        Me.txtBusqueda.TabIndex = 30
-        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.FlatAppearance.BorderSize = 0
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(113, 76)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 31)
-        Me.btnBuscar.TabIndex = 31
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -424,23 +429,45 @@ Partial Class tableFormAlumnos
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
         '
-        'btnClear
+        'btnExitForm
         '
-        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClear.Location = New System.Drawing.Point(27, 76)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(80, 31)
-        Me.btnClear.TabIndex = 32
-        Me.btnClear.Text = "Ver todo"
-        Me.btnClear.UseVisualStyleBackColor = True
-        Me.btnClear.Visible = False
+        Me.btnExitForm.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitForm.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnExitForm.FlatAppearance.BorderSize = 0
+        Me.btnExitForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExitForm.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnExitForm.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnExitForm.Location = New System.Drawing.Point(0, 0)
+        Me.btnExitForm.Name = "btnExitForm"
+        Me.btnExitForm.Size = New System.Drawing.Size(68, 55)
+        Me.btnExitForm.TabIndex = 3
+        Me.btnExitForm.UseVisualStyleBackColor = True
+        '
+        'txtVinculadas
+        '
+        Me.txtVinculadas.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.txtVinculadas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtVinculadas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtVinculadas.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtVinculadas.Location = New System.Drawing.Point(104, 453)
+        Me.txtVinculadas.Name = "txtVinculadas"
+        Me.txtVinculadas.Size = New System.Drawing.Size(84, 19)
+        Me.txtVinculadas.TabIndex = 34
+        Me.txtVinculadas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtVinculadas.Visible = False
+        '
+        'labVinculadas
+        '
+        Me.labVinculadas.AutoSize = True
+        Me.labVinculadas.Font = New System.Drawing.Font("Minion Pro SmBd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labVinculadas.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.labVinculadas.Location = New System.Drawing.Point(3, 428)
+        Me.labVinculadas.Name = "labVinculadas"
+        Me.labVinculadas.Size = New System.Drawing.Size(184, 22)
+        Me.labVinculadas.TabIndex = 33
+        Me.labVinculadas.Text = "Total de horas vinculadas: "
+        Me.labVinculadas.Visible = False
         '
         'tableFormAlumnos
         '
@@ -474,9 +501,9 @@ Partial Class tableFormAlumnos
     Friend WithEvents Panel4 As Panel
     Friend WithEvents datalistAlumnos As DataGridView
     Friend WithEvents btnViewDetailsEmployee As Button
-    Friend WithEvents btnDeleteEmployee As Button
-    Friend WithEvents btnEditEmployee As Button
-    Friend WithEvents btnAddNewEmployee As Button
+    Friend WithEvents btnDeleteAlumno As Button
+    Friend WithEvents btnEditAlumno As Button
+    Friend WithEvents btnAddNewAlumno As Button
     Friend WithEvents VinculacionAcademicaPT_TGU_DBDataSet1 As VinculacionAcademicaPT_TGU_DBDataSet1
     Friend WithEvents AlumnosBindingSource As BindingSource
     Friend WithEvents AlumnosTableAdapter As VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter
@@ -498,4 +525,6 @@ Partial Class tableFormAlumnos
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtBusqueda As TextBox
     Friend WithEvents btnClear As Button
+    Friend WithEvents txtVinculadas As TextBox
+    Friend WithEvents labVinculadas As Label
 End Class

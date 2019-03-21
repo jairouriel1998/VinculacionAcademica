@@ -6,6 +6,7 @@
     End Sub
 
     Private Sub tableFormEmployees_Load(sender As Object, e As EventArgs) Handles Me.Load
+        loadDataToDataTable()
         mostrar()
     End Sub
 
@@ -13,8 +14,12 @@
         mostrar()
     End Sub
 
+    Public Sub loadDataToDataTable()
+        tabla = Me.AlumnosTableAdapter.GetData()
+    End Sub
+
     Private Sub mostrar()
-        Me.AlumnosTableAdapter.Fill(Me.VinculacionAcademicaPT_TGU_DBDataSet1.Alumnos)
+        datalistAlumnos.DataSource = tabla
         datalistAlumnos.ColumnHeadersVisible = True
         datalistAlumnos.Columns(0).Visible = False
         datalistAlumnos.Columns(13).Visible = False
@@ -25,8 +30,8 @@
             emptyRow("dataEmpty") = "No hay datos"
             emptyDataTable.Rows.Add(emptyRow)
             datalistAlumnos.DataSource = emptyDataTable
-            btnDeleteEmployee.Enabled = False
-            btnEditEmployee.Enabled = False
+            btnDeleteAlumno.Enabled = False
+            btnEditAlumno.Enabled = False
             btnViewDetailsEmployee.Enabled = False
         End If
     End Sub
@@ -57,20 +62,20 @@
         Return alumnoData
     End Function
 
-    Private Sub btnAddNewEmployee_Click(sender As Object, e As EventArgs) Handles btnAddNewEmployee.Click
+    Private Sub btnAddNewEmployee_Click(sender As Object, e As EventArgs) Handles btnAddNewAlumno.Click
         Dim detailsEmployee = New detailsFormAlumnos
         detailsEmployee.prepareForm(True, False, False)
         detailsEmployee.Show()
     End Sub
 
-    Private Sub btnEditEmployee_Click(sender As Object, e As EventArgs) Handles btnEditEmployee.Click
+    Private Sub btnEditEmployee_Click(sender As Object, e As EventArgs) Handles btnEditAlumno.Click
         Dim detailsEmployee = New detailsFormAlumnos
         detailsEmployee.prepareForm(False, True, False)
         detailsEmployee.reciveData(sendData())
         detailsEmployee.Show()
     End Sub
 
-    Private Sub btnDeleteEmployee_Click(sender As Object, e As EventArgs) Handles btnDeleteEmployee.Click
+    Private Sub btnDeleteEmployee_Click(sender As Object, e As EventArgs) Handles btnDeleteAlumno.Click
         Dim deletePeticion As Integer = MessageBox.Show("¿Desea eliminar el registro seleccionado?", "caption", MessageBoxButtons.YesNoCancel)
         If deletePeticion = DialogResult.Cancel Then
             MessageBox.Show("Eliminacion cancelada")
@@ -85,8 +90,26 @@
         Dim cuentaBuscar As String
         cuentaBuscar = txtBusqueda.Text
         If cuentaBuscar <> "" Then
-            Me.AlumnosTableAdapter.FillByCuenta(Me.VinculacionAcademicaPT_TGU_DBDataSet1.Alumnos, cuentaBuscar)
+            Dim datosBuscados As DataTable
+            datosBuscados = Me.AlumnosTableAdapter.GetDataByCuenta(cuentaBuscar)
+            datalistAlumnos.DataSource = datosBuscados
             btnClear.Visible = True
+            If datosBuscados.Rows.Count = 0 Then
+                Dim alerta As frmAlerta = New frmAlerta
+                alerta.setText("No se encontraron resultados")
+                alerta.Show()
+            End If
+            If datosBuscados.Rows.Count > 0 Then
+                Dim horasVinculadas As Integer = 0
+                For elementos As Integer = 0 To datosBuscados.Rows.Count - 1
+                    Dim row As DataRow
+                    row = datosBuscados.Rows(elementos)
+                    horasVinculadas += row.Item(6)
+                Next
+                labVinculadas.Visible = True
+                txtVinculadas.Visible = True
+                txtVinculadas.Text = horasVinculadas
+            End If
         Else
             MessageBox.Show("Debe ingresar un numero de cuenta antes de intentar buscar.", "Aviso")
         End If
@@ -95,5 +118,11 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         refreshData()
         btnClear.Visible = False
+        txtBusqueda.Text = ""
+        txtVinculadas.Text = ""
+        txtVinculadas.Visible = False
+        labVinculadas.Visible = False
     End Sub
+
+
 End Class
