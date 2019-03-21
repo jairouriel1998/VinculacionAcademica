@@ -22,11 +22,12 @@ Partial Class tableFormAlumnos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnExitForm = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,10 +39,33 @@ Partial Class tableFormAlumnos
         Me.btnViewDetailsEmployee = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.datalistAlumnos = New System.Windows.Forms.DataGridView()
+        Me.Busqueda = New System.Windows.Forms.Label()
+        Me.txtBusqueda = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CuentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreCompletoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDelProyectoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CatedraticoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HorasInvertidasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EvaluacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PeriodoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorEconomicoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AsignaturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ActivoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
+        Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.datalistAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VinculacionAcademicaPT_TGU_DBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -93,6 +117,10 @@ Partial Class tableFormAlumnos
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.btnClear)
+        Me.Panel3.Controls.Add(Me.btnBuscar)
+        Me.Panel3.Controls.Add(Me.txtBusqueda)
+        Me.Panel3.Controls.Add(Me.Busqueda)
         Me.Panel3.Controls.Add(Me.btnDeleteEmployee)
         Me.Panel3.Controls.Add(Me.btnEditEmployee)
         Me.Panel3.Controls.Add(Me.btnAddNewEmployee)
@@ -113,7 +141,7 @@ Partial Class tableFormAlumnos
         Me.btnDeleteEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteEmployee.ForeColor = System.Drawing.Color.White
         Me.btnDeleteEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDeleteEmployee.Location = New System.Drawing.Point(0, 288)
+        Me.btnDeleteEmployee.Location = New System.Drawing.Point(0, 345)
         Me.btnDeleteEmployee.Name = "btnDeleteEmployee"
         Me.btnDeleteEmployee.Size = New System.Drawing.Size(200, 40)
         Me.btnDeleteEmployee.TabIndex = 7
@@ -130,7 +158,7 @@ Partial Class tableFormAlumnos
         Me.btnEditEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditEmployee.ForeColor = System.Drawing.Color.White
         Me.btnEditEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditEmployee.Location = New System.Drawing.Point(0, 221)
+        Me.btnEditEmployee.Location = New System.Drawing.Point(0, 278)
         Me.btnEditEmployee.Name = "btnEditEmployee"
         Me.btnEditEmployee.Size = New System.Drawing.Size(200, 40)
         Me.btnEditEmployee.TabIndex = 6
@@ -147,7 +175,7 @@ Partial Class tableFormAlumnos
         Me.btnAddNewEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewEmployee.ForeColor = System.Drawing.Color.White
         Me.btnAddNewEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddNewEmployee.Location = New System.Drawing.Point(0, 153)
+        Me.btnAddNewEmployee.Location = New System.Drawing.Point(0, 210)
         Me.btnAddNewEmployee.Name = "btnAddNewEmployee"
         Me.btnAddNewEmployee.Size = New System.Drawing.Size(200, 40)
         Me.btnAddNewEmployee.TabIndex = 5
@@ -164,7 +192,7 @@ Partial Class tableFormAlumnos
         Me.btnViewDetailsEmployee.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnViewDetailsEmployee.ForeColor = System.Drawing.Color.White
         Me.btnViewDetailsEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewDetailsEmployee.Location = New System.Drawing.Point(0, 89)
+        Me.btnViewDetailsEmployee.Location = New System.Drawing.Point(0, 146)
         Me.btnViewDetailsEmployee.Name = "btnViewDetailsEmployee"
         Me.btnViewDetailsEmployee.Size = New System.Drawing.Size(197, 40)
         Me.btnViewDetailsEmployee.TabIndex = 4
@@ -182,55 +210,58 @@ Partial Class tableFormAlumnos
         '
         'datalistAlumnos
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        Me.datalistAlumnos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        Me.datalistAlumnos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.datalistAlumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.datalistAlumnos.AutoGenerateColumns = False
         Me.datalistAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.datalistAlumnos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.datalistAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.datalistAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.datalistAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.datalistAlumnos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CuentaDataGridViewTextBoxColumn, Me.NombreCompletoDataGridViewTextBoxColumn, Me.NombreDelProyectoDataGridViewTextBoxColumn, Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn, Me.CatedraticoDataGridViewTextBoxColumn, Me.HorasInvertidasDataGridViewTextBoxColumn, Me.EvaluacionDataGridViewTextBoxColumn, Me.PeriodoDataGridViewTextBoxColumn, Me.ValorEconomicoDataGridViewTextBoxColumn, Me.AsignaturaDataGridViewTextBoxColumn, Me.CarreraDataGridViewTextBoxColumn, Me.ObservacionesDataGridViewTextBoxColumn, Me.ActivoDataGridViewCheckBoxColumn})
+        Me.datalistAlumnos.DataSource = Me.AlumnosBindingSource
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.DefaultCellStyle = DataGridViewCellStyle8
         Me.datalistAlumnos.Location = New System.Drawing.Point(0, 0)
         Me.datalistAlumnos.MultiSelect = False
         Me.datalistAlumnos.Name = "datalistAlumnos"
         Me.datalistAlumnos.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistAlumnos.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumTurquoise
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        Me.datalistAlumnos.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistAlumnos.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumTurquoise
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.datalistAlumnos.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.datalistAlumnos.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -240,6 +271,176 @@ Partial Class tableFormAlumnos
         Me.datalistAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.datalistAlumnos.Size = New System.Drawing.Size(633, 478)
         Me.datalistAlumnos.TabIndex = 0
+        '
+        'Busqueda
+        '
+        Me.Busqueda.AutoSize = True
+        Me.Busqueda.Font = New System.Drawing.Font("Minion Pro SmBd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Busqueda.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Busqueda.Location = New System.Drawing.Point(6, 26)
+        Me.Busqueda.Name = "Busqueda"
+        Me.Busqueda.Size = New System.Drawing.Size(130, 22)
+        Me.Busqueda.TabIndex = 8
+        Me.Busqueda.Text = "Buscar por cuenta"
+        '
+        'txtBusqueda
+        '
+        Me.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBusqueda.ForeColor = System.Drawing.Color.MediumTurquoise
+        Me.txtBusqueda.Location = New System.Drawing.Point(27, 51)
+        Me.txtBusqueda.Name = "txtBusqueda"
+        Me.txtBusqueda.Size = New System.Drawing.Size(161, 19)
+        Me.txtBusqueda.TabIndex = 30
+        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(113, 76)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 31)
+        Me.btnBuscar.TabIndex = 31
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CuentaDataGridViewTextBoxColumn
+        '
+        Me.CuentaDataGridViewTextBoxColumn.DataPropertyName = "Cuenta"
+        Me.CuentaDataGridViewTextBoxColumn.HeaderText = "Cuenta"
+        Me.CuentaDataGridViewTextBoxColumn.Name = "CuentaDataGridViewTextBoxColumn"
+        Me.CuentaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreCompletoDataGridViewTextBoxColumn
+        '
+        Me.NombreCompletoDataGridViewTextBoxColumn.DataPropertyName = "Nombre Completo"
+        Me.NombreCompletoDataGridViewTextBoxColumn.HeaderText = "Nombre Completo"
+        Me.NombreCompletoDataGridViewTextBoxColumn.Name = "NombreCompletoDataGridViewTextBoxColumn"
+        Me.NombreCompletoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDelProyectoDataGridViewTextBoxColumn
+        '
+        Me.NombreDelProyectoDataGridViewTextBoxColumn.DataPropertyName = "Nombre del Proyecto"
+        Me.NombreDelProyectoDataGridViewTextBoxColumn.HeaderText = "Nombre del Proyecto"
+        Me.NombreDelProyectoDataGridViewTextBoxColumn.Name = "NombreDelProyectoDataGridViewTextBoxColumn"
+        Me.NombreDelProyectoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'OrganizacionBeneficiadaDataGridViewTextBoxColumn
+        '
+        Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn.DataPropertyName = "Organizacion Beneficiada"
+        Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn.HeaderText = "Organizacion Beneficiada"
+        Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn.Name = "OrganizacionBeneficiadaDataGridViewTextBoxColumn"
+        Me.OrganizacionBeneficiadaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CatedraticoDataGridViewTextBoxColumn
+        '
+        Me.CatedraticoDataGridViewTextBoxColumn.DataPropertyName = "Catedratico"
+        Me.CatedraticoDataGridViewTextBoxColumn.HeaderText = "Catedratico"
+        Me.CatedraticoDataGridViewTextBoxColumn.Name = "CatedraticoDataGridViewTextBoxColumn"
+        Me.CatedraticoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'HorasInvertidasDataGridViewTextBoxColumn
+        '
+        Me.HorasInvertidasDataGridViewTextBoxColumn.DataPropertyName = "Horas Invertidas"
+        Me.HorasInvertidasDataGridViewTextBoxColumn.HeaderText = "Horas Invertidas"
+        Me.HorasInvertidasDataGridViewTextBoxColumn.Name = "HorasInvertidasDataGridViewTextBoxColumn"
+        Me.HorasInvertidasDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EvaluacionDataGridViewTextBoxColumn
+        '
+        Me.EvaluacionDataGridViewTextBoxColumn.DataPropertyName = "Evaluacion"
+        Me.EvaluacionDataGridViewTextBoxColumn.HeaderText = "Evaluacion"
+        Me.EvaluacionDataGridViewTextBoxColumn.Name = "EvaluacionDataGridViewTextBoxColumn"
+        Me.EvaluacionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PeriodoDataGridViewTextBoxColumn
+        '
+        Me.PeriodoDataGridViewTextBoxColumn.DataPropertyName = "Periodo"
+        Me.PeriodoDataGridViewTextBoxColumn.HeaderText = "Periodo"
+        Me.PeriodoDataGridViewTextBoxColumn.Name = "PeriodoDataGridViewTextBoxColumn"
+        Me.PeriodoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ValorEconomicoDataGridViewTextBoxColumn
+        '
+        Me.ValorEconomicoDataGridViewTextBoxColumn.DataPropertyName = "Valor Economico"
+        Me.ValorEconomicoDataGridViewTextBoxColumn.HeaderText = "Valor Economico"
+        Me.ValorEconomicoDataGridViewTextBoxColumn.Name = "ValorEconomicoDataGridViewTextBoxColumn"
+        Me.ValorEconomicoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AsignaturaDataGridViewTextBoxColumn
+        '
+        Me.AsignaturaDataGridViewTextBoxColumn.DataPropertyName = "Asignatura"
+        Me.AsignaturaDataGridViewTextBoxColumn.HeaderText = "Asignatura"
+        Me.AsignaturaDataGridViewTextBoxColumn.Name = "AsignaturaDataGridViewTextBoxColumn"
+        Me.AsignaturaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CarreraDataGridViewTextBoxColumn
+        '
+        Me.CarreraDataGridViewTextBoxColumn.DataPropertyName = "Carrera"
+        Me.CarreraDataGridViewTextBoxColumn.HeaderText = "Carrera"
+        Me.CarreraDataGridViewTextBoxColumn.Name = "CarreraDataGridViewTextBoxColumn"
+        Me.CarreraDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ObservacionesDataGridViewTextBoxColumn
+        '
+        Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
+        Me.ObservacionesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ActivoDataGridViewCheckBoxColumn
+        '
+        Me.ActivoDataGridViewCheckBoxColumn.DataPropertyName = "Activo"
+        Me.ActivoDataGridViewCheckBoxColumn.HeaderText = "Activo"
+        Me.ActivoDataGridViewCheckBoxColumn.Name = "ActivoDataGridViewCheckBoxColumn"
+        Me.ActivoDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'AlumnosBindingSource
+        '
+        Me.AlumnosBindingSource.DataMember = "Alumnos"
+        Me.AlumnosBindingSource.DataSource = Me.VinculacionAcademicaPT_TGU_DBDataSet1
+        '
+        'VinculacionAcademicaPT_TGU_DBDataSet1
+        '
+        Me.VinculacionAcademicaPT_TGU_DBDataSet1.DataSetName = "VinculacionAcademicaPT_TGU_DBDataSet1"
+        Me.VinculacionAcademicaPT_TGU_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AlumnosTableAdapter
+        '
+        Me.AlumnosTableAdapter.ClearBeforeFill = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Minion Pro", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClear.Location = New System.Drawing.Point(27, 76)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(80, 31)
+        Me.btnClear.TabIndex = 32
+        Me.btnClear.Text = "Ver todo"
+        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.Visible = False
         '
         'tableFormAlumnos
         '
@@ -256,8 +457,11 @@ Partial Class tableFormAlumnos
         Me.Text = "tableFormEmployees"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         CType(Me.datalistAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VinculacionAcademicaPT_TGU_DBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -273,4 +477,25 @@ Partial Class tableFormAlumnos
     Friend WithEvents btnDeleteEmployee As Button
     Friend WithEvents btnEditEmployee As Button
     Friend WithEvents btnAddNewEmployee As Button
+    Friend WithEvents VinculacionAcademicaPT_TGU_DBDataSet1 As VinculacionAcademicaPT_TGU_DBDataSet1
+    Friend WithEvents AlumnosBindingSource As BindingSource
+    Friend WithEvents AlumnosTableAdapter As VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CuentaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreCompletoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDelProyectoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents OrganizacionBeneficiadaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CatedraticoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HorasInvertidasDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EvaluacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PeriodoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ValorEconomicoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AsignaturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CarreraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ActivoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Busqueda As Label
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents btnClear As Button
 End Class

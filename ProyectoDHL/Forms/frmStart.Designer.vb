@@ -22,6 +22,7 @@ Partial Class frmStart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStart))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -47,6 +48,7 @@ Partial Class frmStart
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmStart"
         Me.Text = "frmStart"
         Me.ResumeLayout(False)

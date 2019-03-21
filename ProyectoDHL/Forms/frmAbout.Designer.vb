@@ -143,6 +143,7 @@ Partial Class frmAbout
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAbout"
         Me.Text = "frmAbout"
         Me.Panel1.ResumeLayout(False)

@@ -15,8 +15,8 @@
 
     Private Sub mostrar()
         Try
-            Dim funciones As New dConsumers
-            tabla = funciones.mostrar
+            ' Dim funciones As New dConsumers
+            'tabla = funciones.mostrar
             If tabla.Rows.Count <> 0 Then
                 datalistConsumers.DataSource = tabla
                 datalistConsumers.ColumnHeadersVisible = True
@@ -42,36 +42,36 @@
     End Sub
 
     Private Sub btnViewDetailsConsumer_Click(sender As Object, e As EventArgs) Handles btnViewDetailsConsumer.Click
-        Dim detailsConsumer = New detailsFormConsumer
+        Dim detailsConsumer = New detailsFormAlumnos
         detailsConsumer.prepareForm(False, False, True)
-        detailsConsumer.reciveData(sendData())
+        'detailsConsumer.reciveData(sendData())
         detailsConsumer.Show()
     End Sub
 
-    Function sendData() As eConsumers
-        Dim consumerData As New eConsumers
-        consumerData.Id_persona1 = datalistConsumers.SelectedCells.Item(0).Value
-        consumerData.Id_cliente1 = datalistConsumers.SelectedCells.Item(1).Value
-        consumerData.Nombre1 = datalistConsumers.SelectedCells.Item(2).Value
-        consumerData.Apellido1 = datalistConsumers.SelectedCells.Item(3).Value
-        consumerData.Identidad1 = datalistConsumers.SelectedCells.Item(4).Value
-        consumerData.Telefono1 = datalistConsumers.SelectedCells.Item(5).Value
-        consumerData.Email1 = datalistConsumers.SelectedCells.Item(6).Value
-        consumerData.Direccion1 = datalistConsumers.SelectedCells.Item(7).Value
-        Return consumerData
+    Function sendData() 'As eConsumers
+        'Dim consumerData As New eConsumers
+        'consumerData.Id_persona1 = datalistConsumers.SelectedCells.Item(0).Value
+        'consumerData.Id_cliente1 = datalistConsumers.SelectedCells.Item(1).Value
+        'consumerData.Nombre1 = datalistConsumers.SelectedCells.Item(2).Value
+        'consumerData.Apellido1 = datalistConsumers.SelectedCells.Item(3).Value
+        'consumerData.Identidad1 = datalistConsumers.SelectedCells.Item(4).Value
+        'consumerData.Telefono1 = datalistConsumers.SelectedCells.Item(5).Value
+        'consumerData.Email1 = datalistConsumers.SelectedCells.Item(6).Value
+        'consumerData.Direccion1 = datalistConsumers.SelectedCells.Item(7).Value
+        Return Nothing
     End Function
 
     Private Sub btnAddNewConsumer_Click(sender As Object, e As EventArgs) Handles btnAddNewConsumer.Click
-        Dim detailsConsumer = New detailsFormConsumer
-        detailsConsumer.prepareForm(True, False, False)
-        detailsConsumer.Show()
+        Dim detailsRegistro = New detailsFormAlumnos
+        detailsRegistro.prepareForm(True, False, False)
+        detailsRegistro.Show()
     End Sub
 
     Private Sub btnEditConsumer_Click(sender As Object, e As EventArgs) Handles btnEditConsumer.Click
-        Dim detailsConsumer = New detailsFormConsumer
-        detailsConsumer.prepareForm(False, True, False)
-        detailsConsumer.reciveData(sendData())
-        detailsConsumer.Show()
+        Dim detailsRegistro = New detailsFormAlumnos
+        detailsRegistro.prepareForm(False, True, False)
+        'detailsConsumer.reciveData(sendData())
+        detailsRegistro.Show()
     End Sub
 
     Private Sub btnDeleteConsumer_Click(sender As Object, e As EventArgs) Handles btnDeleteConsumer.Click
@@ -79,8 +79,8 @@
         If deletePeticion = DialogResult.Cancel Then
             MessageBox.Show("Eliminacion cancelada")
         ElseIf deletePeticion = DialogResult.Yes Then
-            Dim setData As New dConsumers
-            setData.eliminar(datalistConsumers.SelectedCells.Item(1).Value)
+            'Dim setData As New dConsumers
+            '      setData.eliminar(datalistConsumers.SelectedCells.Item(1).Value)
         End If
         refreshData()
     End Sub

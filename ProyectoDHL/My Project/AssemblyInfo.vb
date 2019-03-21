@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("ProyectoDHL")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("ProyectoDHL")>
+<Assembly: AssemblyTitle("VinculacionAcademica")>
+<Assembly: AssemblyDescription("Sistema de gestion de horas vinculacion")>
+<Assembly: AssemblyCompany("TriggerWare")>
+<Assembly: AssemblyProduct("VinculacionAcademica")>
 <Assembly: AssemblyCopyright("Copyright ©  2018")>
 <Assembly: AssemblyTrademark("")>
 

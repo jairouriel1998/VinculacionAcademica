@@ -1,0 +1,261 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ProyectoDHL
+</name>
+</assembly>
+<members>
+<member name="T:ProyectoDHL.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.clientes">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.compras">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.DHL_Logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.DHL_Logo2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.dhlicon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.diamante">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.empleados">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.ico2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Icono_Maximizar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Icono_Minimizar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Icono_Restaurar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.ll">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.logo_ceutec_blanco">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.LogoCheeseCode">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.Mobile_Menu_Icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.pagos">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.producto">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.relo3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.reportes">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoDHL.My.Resources.Resources.venta">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet.AlumnosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet.AlumnosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet.AlumnosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.AlumnosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.UpdateAll(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1.AlumnosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1.AlumnosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1.AlumnosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.UpdateAll(ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

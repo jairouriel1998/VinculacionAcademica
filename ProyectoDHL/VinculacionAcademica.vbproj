@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5999F41F-DFC1-4CE1-BDFB-7AA41E573294}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProyectoDHL.My.MyApplication</StartupObject>
+    <RootNamespace>ProyectoDHL</RootNamespace>
+    <AssemblyName>VinculacionAcademica</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VinculacionAcademica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VinculacionAcademica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>diamante.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\eAlumnos.vb" />
+    <Compile Include="Forms\detailsForms\detailsFormAlumnos.Designer.vb">
+      <DependentUpon>detailsFormAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\detailsForms\detailsFormAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStart.Designer.vb">
+      <DependentUpon>frmStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tableForms\tableFormConsumers.Designer.vb">
+      <DependentUpon>tableFormConsumers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tableForms\tableFormConsumers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tableForms\tableFormAlumnos.Designer.vb">
+      <DependentUpon>tableFormAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tableForms\tableFormAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VinculacionAcademicaPT_TGU_DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VinculacionAcademicaPT_TGU_DBDataSet.vb">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VinculacionAcademicaPT_TGU_DBDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\detailsForms\detailsFormAlumnos.resx">
+      <DependentUpon>detailsFormAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStart.resx">
+      <DependentUpon>frmStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tableForms\tableFormConsumers.resx">
+      <DependentUpon>tableFormConsumers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tableForms\tableFormAlumnos.resx">
+      <DependentUpon>tableFormAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet.xsc">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VinculacionAcademicaPT_TGU_DBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet.xss">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet1.xsc">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VinculacionAcademicaPT_TGU_DBDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VinculacionAcademicaPT_TGU_DBDataSet1.xss">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Icono cerrar FN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Icono Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Icono Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Icono Restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Mobile-Menu-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\pagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\relo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\ico2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\ll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\logo-ceutec-blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\LogoCheeseCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="diamante.ico" />
+    <None Include="icons\diamante1.png" />
+    <Content Include="VinculacionAcademicaPT_TGU_DB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="icons\diamante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
