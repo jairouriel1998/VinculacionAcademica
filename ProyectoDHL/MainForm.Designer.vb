@@ -56,6 +56,7 @@ Partial Class MainForm
         Me.superiorPanel.Controls.Add(Me.btnMinimize)
         Me.superiorPanel.Controls.Add(Me.btnMaximize)
         Me.superiorPanel.Controls.Add(Me.btnClose)
+        Me.superiorPanel.Cursor = System.Windows.Forms.Cursors.SizeAll
         Me.superiorPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.superiorPanel.Location = New System.Drawing.Point(0, 0)
         Me.superiorPanel.Name = "superiorPanel"
@@ -87,9 +88,9 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 40)
+        Me.Label1.Size = New System.Drawing.Size(525, 40)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "  Vinculación Académica"
+        Me.Label1.Text = "  Control De Vinculación Académica"
         '
         'btnMinimize
         '
@@ -145,7 +146,7 @@ Partial Class MainForm
         '
         'formsPanel
         '
-        Me.formsPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.formsPanel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.formsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.formsPanel.Location = New System.Drawing.Point(220, 40)
         Me.formsPanel.Name = "formsPanel"
@@ -173,7 +174,6 @@ Partial Class MainForm
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(5, 38)
         Me.Panel3.TabIndex = 4
-        Me.Panel3.Visible = False
         '
         'menuPanel
         '
@@ -233,13 +233,12 @@ Partial Class MainForm
         Me.btnFormEmpleados.Name = "btnFormEmpleados"
         Me.btnFormEmpleados.Size = New System.Drawing.Size(220, 40)
         Me.btnFormEmpleados.TabIndex = 7
-        Me.btnFormEmpleados.Text = "Alumnos"
+        Me.btnFormEmpleados.Text = "Registros"
         Me.btnFormEmpleados.UseVisualStyleBackColor = True
         '
         'btnFormClientes
         '
         Me.btnFormClientes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFormClientes.Enabled = False
         Me.btnFormClientes.FlatAppearance.BorderSize = 0
         Me.btnFormClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnFormClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
@@ -254,7 +253,6 @@ Partial Class MainForm
         Me.btnFormClientes.TabIndex = 6
         Me.btnFormClientes.Text = "Papelera"
         Me.btnFormClientes.UseVisualStyleBackColor = True
-        Me.btnFormClientes.Visible = False
         '
         'picboxLogo
         '

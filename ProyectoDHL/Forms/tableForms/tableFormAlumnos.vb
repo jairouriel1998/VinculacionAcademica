@@ -2,26 +2,28 @@
     Private tabla As New DataTable
 
     Private Sub btnExitForm_Click(sender As Object, e As EventArgs) Handles btnExitForm.Click
+        MainForm.reintegrateForm()
         Me.Close()
     End Sub
 
     Private Sub tableFormEmployees_Load(sender As Object, e As EventArgs) Handles Me.Load
+        refreshData()
+    End Sub
+
+    Public Sub refreshData()
         loadDataToDataTable()
         mostrar()
     End Sub
 
-    Public Sub refreshData()
-        mostrar()
-    End Sub
-
     Public Sub loadDataToDataTable()
-        tabla = Me.AlumnosTableAdapter.GetData()
+        tabla = Me.AlumnosTableAdapter.GetData(True)
     End Sub
 
     Private Sub mostrar()
         datalistAlumnos.DataSource = tabla
         datalistAlumnos.ColumnHeadersVisible = True
         datalistAlumnos.Columns(0).Visible = False
+        datalistAlumnos.Columns(12).Visible = False
         datalistAlumnos.Columns(13).Visible = False
         If datalistAlumnos.Rows.Count = 0 Then
             Dim emptyDataTable As New DataTable
@@ -87,26 +89,23 @@
         Return alumnoData
     End Function
 
-    Private Sub btnAddNewEmployee_Click(sender As Object, e As EventArgs) Handles btnAddNewAlumno.Click
+    Private Sub btnAddNewAlumno_Click(sender As Object, e As EventArgs) Handles btnAddNewAlumno.Click
         Dim detailsEmployee = New detailsFormAlumnos
         detailsEmployee.prepareForm(True, False, False)
         detailsEmployee.Show()
     End Sub
 
-    Private Sub btnEditEmployee_Click(sender As Object, e As EventArgs) Handles btnEditAlumno.Click
+    Private Sub btnEditAlumno_Click(sender As Object, e As EventArgs) Handles btnEditAlumno.Click
         Dim detailsEmployee = New detailsFormAlumnos
         detailsEmployee.prepareForm(False, True, False)
         detailsEmployee.reciveData(sendData())
         detailsEmployee.Show()
     End Sub
 
-    Private Sub btnDeleteEmployee_Click(sender As Object, e As EventArgs) Handles btnDeleteAlumno.Click
-        Dim deletePeticion As Integer = MessageBox.Show("¿Desea eliminar el registro seleccionado?", "caption", MessageBoxButtons.YesNoCancel)
-        If deletePeticion = DialogResult.Cancel Then
-            MessageBox.Show("Eliminacion cancelada")
-        ElseIf deletePeticion = DialogResult.Yes Then
-            ' Dim setData As New dEmployees
-            'setData.eliminar(datalistAlumnos.SelectedCells.Item(1).Value)
+    Private Sub btnDeleteAlumno_Click(sender As Object, e As EventArgs) Handles btnDeleteAlumno.Click
+        Dim deletePeticion As Integer = MessageBox.Show("¿Desea eliminar el registro seleccionado?", "", MessageBoxButtons.YesNoCancel)
+        If deletePeticion = DialogResult.Yes Then
+            Me.AlumnosTableAdapter.ActivoRegistro(False, datalistAlumnos.SelectedCells.Item(0).Value)
         End If
         refreshData()
     End Sub
@@ -137,7 +136,9 @@
                 txtVinculadas.Text = horasVinculadas
             End If
         Else
-            MessageBox.Show("Debe ingresar un numero de cuenta antes de intentar buscar.", "Aviso")
+            Dim alerta As frmAlerta = New frmAlerta
+            alerta.setText("Debe ingresar un número de cuenta para poder buscar.")
+            alerta.Show()
         End If
     End Sub
 
@@ -148,7 +149,6 @@
         txtVinculadas.Visible = False
         labVinculadas.Visible = False
         refreshData()
-
     End Sub
 
     Private Sub datalistAlumnos_SelectionChanged(sender As Object, e As EventArgs) Handles datalistAlumnos.SelectionChanged
@@ -161,5 +161,41 @@
 
             End Try
         End If
+    End Sub
+
+    Public Sub edicionDatos(ByRef datos As eAlumnos)
+        Me.AlumnosTableAdapter.EditarRegistro(datos.Cuenta1, datos.NombreCompleto1, datos.NombreProyecto1, datos.OrganizacionBeneficiada1, datos.Catedratico1, datos.HorasInvertidas1, datos.Evaluacion1, datos.Periodo1, datos.ValorEconomico1, datos.Asignatura1, datos.Carrera1, datos.Observaciones1, datos.Id1)
+        refreshData()
+        Dim alerta As frmAlerta = New frmAlerta
+        alerta.setText("Datos guardados exitosamente.")
+        alerta.Show()
+    End Sub
+
+    Public Sub nuevosDatos(ByRef datos As eAlumnos)
+        Me.AlumnosTableAdapter.InsertarRegistro(datos.Cuenta1, datos.NombreCompleto1, datos.NombreProyecto1, datos.OrganizacionBeneficiada1, datos.Catedratico1, datos.HorasInvertidas1, datos.Evaluacion1, datos.Periodo1, datos.ValorEconomico1, datos.Asignatura1, datos.Carrera1, datos.Observaciones1, True)
+        Dim alerta As frmAlerta = New frmAlerta
+        alerta.setText("Datos guardados exitosamente.")
+        alerta.Show()
+        refreshData()
+    End Sub
+
+    'Metodos para impacto en la base de datos lamados desde otros formularios
+    'Hice estos metodos aquí porque no construí un controlador para eso xD que debería estar en la carpeta Data
+
+    Public Function extraerEliminados() As DataTable
+        tabla = Me.AlumnosTableAdapter.GetData(False)
+        Return tabla
+    End Function
+
+    Public Sub restaurarRegistro(ByRef id_Registro As Integer)
+        Me.AlumnosTableAdapter.ActivoRegistro(True, id_Registro)
+    End Sub
+
+    Public Sub eliminarRegistro(ByRef id_Registro As Integer)
+        Me.AlumnosTableAdapter.EliminarRegistro(id_Registro)
+    End Sub
+
+    Public Sub vaciarPapelera()
+        Me.AlumnosTableAdapter.eliminacionSeccionada(False)
     End Sub
 End Class

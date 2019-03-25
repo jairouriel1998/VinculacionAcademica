@@ -119,10 +119,10 @@
     <Compile Include="Forms\frmStart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\tableForms\tableFormConsumers.Designer.vb">
-      <DependentUpon>tableFormConsumers.vb</DependentUpon>
+    <Compile Include="Forms\tableForms\tableFormPapelera.Designer.vb">
+      <DependentUpon>tableFormPapelera.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\tableForms\tableFormConsumers.vb">
+    <Compile Include="Forms\tableForms\tableFormPapelera.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\tableForms\tableFormAlumnos.Designer.vb">
@@ -166,6 +166,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VinculacionAcademicaPT_TGU_DBDataSet1.vb">
+      <DependentUpon>VinculacionAcademicaPT_TGU_DBDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\detailsForms\detailsFormAlumnos.resx">
@@ -180,8 +183,8 @@
     <EmbeddedResource Include="Forms\frmStart.resx">
       <DependentUpon>frmStart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\tableForms\tableFormConsumers.resx">
-      <DependentUpon>tableFormConsumers.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\tableForms\tableFormPapelera.resx">
+      <DependentUpon>tableFormPapelera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\tableForms\tableFormAlumnos.resx">
       <DependentUpon>tableFormAlumnos.vb</DependentUpon>
@@ -202,6 +205,9 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.TableAdapterManager.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -288,6 +294,7 @@
   <ItemGroup>
     <Content Include="diamante.ico" />
     <None Include="icons\diamante1.png" />
+    <None Include="icons\logo-ceutec.png" />
     <Content Include="iconUnitec.ico" />
     <Content Include="VinculacionAcademicaPT_TGU_DB.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

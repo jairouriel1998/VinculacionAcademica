@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class detailsFormAlumnos
     Dim newAlumno, editAlumno, viewAlumno As Boolean
-    Dim id_registro As Integer
+    Dim registroActual As New eAlumnos
 
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
@@ -78,6 +78,7 @@ Public Class detailsFormAlumnos
             txtAsignatura.Text = alumnoData.Asignatura1
             txtCarrera.Text = alumnoData.Carrera1
             txtObservaciones.Text = alumnoData.Observaciones1
+            registroActual = alumnoData
         Else
             txtCuenta.Text = ""
             txtNombre.Text = ""
@@ -91,92 +92,94 @@ Public Class detailsFormAlumnos
             txtAsignatura.Text = ""
             txtCarrera.Text = ""
             txtObservaciones.Text = ""
+            registroActual = alumnoData
         End If
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If newAlumno Then
-            'If txtCuenta.Text <> "" And txtEmployeeLastName.Text <> "" And
-            'txtEmployeeIdCard.Text <> "" And txtEmployeePhone.Text <> "" And
-            'txtEmployeeEmail.Text <> "" And txtEmployeePosition.Text <> "" Then
-            'Try
-            'Dim tablaDatos As New eEmployees
-            'Dim funciones As New dEmployees
-            'tablaDatos.Nombre1 = txtCuenta.Text
-            'tablaDatos.Apellido1 = txtEmployeeLastName.Text
-            'tablaDatos.Identidad1 = txtEmployeeIdCard.Text
-            'tablaDatos.Telefono1 = txtEmployeePhone.Text
-            'tablaDatos.Email1 = txtEmployeeEmail.Text
-            'tablaDatos.Cargo1 = txtEmployeePosition.Text
-            ' If funciones.insertar(tablaDatos) Then
-            'MessageBox.Show("Empleado registrado exitosamente",
-            '                   "Guardando registro", MessageBoxButtons.OK,
-            'MessageBoxIcon.Information)
-            'Else
-            'MessageBox.Show("Ha ocurrido un error! Registro no realizado",
-            '                   "Guardando registro", MessageBoxButtons.OK,
-            'MessageBoxIcon.Error)
-            'End If
-            'Catch evento As Exception
-            'MsgBox(evento.Message)
-            'End Try
-            'Else
-            'MessageBox.Show("Falta Informacion para almacenar en la Base de Datos",
-            '                    "Guardando registro", MessageBoxButtons.OK,
-            'MessageBoxIcon.Information)
-        ElseIf editAlumno Then
-            'If txtCuenta.Text <> "" And txtEmployeeLastName.Text <> "" And
-            'txtEmployeeIdCard.Text <> "" And txtEmployeePhone.Text <> "" And
-            'txtEmployeeEmail.Text <> "" And txtEmployeePosition.Text <> "" Then
-            'Try
-            'Dim tablaDatos As New eEmployees
-            '       Dim funciones As New dEmployees
-            'tablaDatos.Id_persona1 = person_id
-            'tablaDatos.Id_empleado1 = employee_id
-            'tablaDatos.Nombre1 = txtCuenta.Text
-            'tablaDatos.Apellido1 = txtEmployeeLastName.Text
-            'tablaDatos.Identidad1 = txtEmployeeIdCard.Text
-            'tablaDatos.Telefono1 = txtEmployeePhone.Text
-            'tablaDatos.Email1 = txtEmployeeEmail.Text
-            'tablaDatos.Cargo1 = txtEmployeePosition.Text
-            '      If funciones.actualizar(tablaDatos) Then
-            '     MessageBox.Show("Cambios guardados exitosamente",
-            '                        "Guardando registro", MessageBoxButtons.OK,
-            '   MessageBoxIcon.Information)
-            '  Else
-            ' MessageBox.Show("Ha ocurrido un error! No se guardaron los cambios",
-            '                    "Guardando registro", MessageBoxButtons.OK,
-            'MessageBoxIcon.Error)
-            'End If
-            'Catch evento As Exception
-            'MsgBox(evento.Message)
-            'End Try
-        Else
-                MessageBox.Show("Falta Informacion para almacenar en la Base de Datos",
-                                "Guardando registro", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information)
+
+        Dim errores As Boolean = False
+
+        If txtCuenta.Text <> "" And txtNombre.Text <> "" And txtProyecto.Text <> "" And txtHoras.Text <> "" Then
+
+            registroActual.Cuenta1 = txtCuenta.Text
+            registroActual.NombreCompleto1 = txtNombre.Text
+            registroActual.NombreProyecto1 = txtProyecto.Text
+            registroActual.OrganizacionBeneficiada1 = txtBeneficiado.Text
+            registroActual.Catedratico1 = txtEvaluador.Text
+
+            If txtHoras.Text = "" Then
+                registroActual.HorasInvertidas1 = 0
+            Else
+                Try
+                    registroActual.HorasInvertidas1 = Integer.Parse(txtHoras.Text)
+                Catch ex As Exception
+                    registroActual.HorasInvertidas1 = 0
+                    errores = True
+                End Try
             End If
-        'End If
-        Me.Close()
-        MainForm.refreshAlumnosData()
+
+            If txtEvaluacion.Text = "" Then
+                registroActual.Evaluacion1 = 0
+            Else
+                Try
+                    registroActual.Evaluacion1 = Integer.Parse(txtEvaluacion.Text)
+                Catch ex As Exception
+                    registroActual.Evaluacion1 = 0
+                    errores = True
+                End Try
+            End If
+
+            registroActual.Periodo1 = txtPeriodo.Text
+
+            If txtValor.Text = "" Then
+                registroActual.ValorEconomico1 = 0
+            Else
+                Try
+                    registroActual.ValorEconomico1 = Integer.Parse(txtValor.Text)
+                Catch ex As Exception
+                    registroActual.ValorEconomico1 = 0
+                    errores = True
+                End Try
+            End If
+
+
+            registroActual.Asignatura1 = txtAsignatura.Text
+            registroActual.Carrera1 = txtCarrera.Text
+            registroActual.Observaciones1 = txtObservaciones.Text
+
+            If errores = False Then
+                If newAlumno Then
+                    Dim deletePeticion As Integer = MessageBox.Show("¿Desea guardar el nuevo registro?", "", MessageBoxButtons.YesNo)
+                    If deletePeticion = DialogResult.Yes Then
+                        tableFormAlumnos.nuevosDatos(registroActual)
+                        MainForm.formTablaRegistros.refreshData()
+                        Me.Close()
+                    End If
+
+                ElseIf editAlumno Then
+                    Dim deletePeticion As Integer = MessageBox.Show("¿Desea guardar los cambios realizados?", "", MessageBoxButtons.YesNo)
+                    If deletePeticion = DialogResult.Yes Then
+                        tableFormAlumnos.edicionDatos(registroActual)
+                        MainForm.formTablaRegistros.refreshData()
+                        Me.Close()
+                    End If
+                End If
+            Else
+                Dim alerta As frmAlerta = New frmAlerta
+                alerta.setText("ERROR!" + vbLf + "Se ha ingresado texto en campos numéricos." + vbLf + vbLf + " No se han guardado los cambios.")
+                alerta.Show()
+            End If
+        Else
+            Dim alerta As frmAlerta = New frmAlerta
+            alerta.setText("Se necesitan los campos: número de cuenta, el nombre del estudiante, el nombre del proyecto y las horas vinculadas para poder guardar el nuevo registro.")
+            alerta.Show()
+        End If
     End Sub
 
     Private Sub Label1_MouseMove(sender As Object, e As MouseEventArgs) Handles Label1.MouseMove
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
-
-    Private Sub AlumnosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        'Me.AlumnosBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.VinculacionAcademicaPT_TGU_DBDataSet1)
-    End Sub
-
-    Private Sub AlumnosBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs)
-        Me.Validate()
-        'Me.AlumnosBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.VinculacionAcademicaPT_TGU_DBDataSet1)
-
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -192,12 +195,18 @@ Public Class detailsFormAlumnos
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        'txtCuenta.Text = ""
-        'txtEmployeeLastName.Text = ""
-        'txtEmployeeIdCard.Text = ""
-        'txtEmployeePhone.Text = ""
-        'txtEmployeeEmail.Text = ""
-        'txtEmployeePosition.Text = ""
+        txtCuenta.Text = ""
+        txtNombre.Text = ""
+        txtProyecto.Text = ""
+        txtBeneficiado.Text = ""
+        txtEvaluador.Text = ""
+        txtHoras.Text = ""
+        txtEvaluacion.Text = ""
+        txtPeriodo.Text = ""
+        txtValor.Text = ""
+        txtAsignatura.Text = ""
+        txtCarrera.Text = ""
+        txtObservaciones.Text = ""
     End Sub
 
 End Class

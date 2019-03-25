@@ -1,5 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class MainForm
+    Public formTablaRegistros As tableFormAlumnos
+
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -33,6 +35,10 @@ Public Class MainForm
         openFormInPanel(New frmStart)
     End Sub
 
+    Public Sub reintegrateForm()
+        openFormInPanel(New frmStart)
+    End Sub
+
     Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles superiorPanel.MouseMove
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
@@ -42,7 +48,7 @@ Public Class MainForm
         If menuPanel.Width <= 60 Then
             Me.hiddenMenuTimer.Enabled = False
         Else
-            Me.menuPanel.Width = menuPanel.Width - 20
+            Me.menuPanel.Width = 60 'menuPanel.Width - 20
         End If
     End Sub
 
@@ -50,14 +56,14 @@ Public Class MainForm
         If menuPanel.Width >= 220 Then
             Me.showMenuTimer.Enabled = False
         Else
-            Me.menuPanel.Width = menuPanel.Width + 20
+            Me.menuPanel.Width = 220 'menuPanel.Width + 20
         End If
     End Sub
 
     Private Sub btnAcordeon_Click(sender As Object, e As EventArgs) Handles btnAcordeon.Click
         If menuPanel.Width = 220 Then
             hiddenMenuTimer.Enabled = True
-        ElseIf menuPanel.width = 60 Then
+        ElseIf menuPanel.Width = 60 Then
             showMenuTimer.Enabled = True
         End If
 
@@ -76,24 +82,21 @@ Public Class MainForm
         sonFormObject.Show()
     End Sub
 
-    Private Sub formsPanel_MouseHover(sender As Object, e As EventArgs) Handles formsPanel.MouseHover
-        openFormInPanel(New frmStart)
-    End Sub
-
     Private Sub btnFormEmpleados_Click(sender As Object, e As EventArgs) Handles btnFormEmpleados.Click
-        openFormInPanel(New tableFormAlumnos)
+        formTablaRegistros = New tableFormAlumnos
+        openFormInPanel(formTablaRegistros)
     End Sub
 
     Private Sub btnFormClientes_Click(sender As Object, e As EventArgs) Handles btnFormClientes.Click
-        openFormInPanel(New tableFormConsumers)
+        openFormInPanel(New tableFormPapelera)
     End Sub
 
     Public Sub refreshAlumnosData()
-        openFormInPanel(New tableFormAlumnos)
+        formTablaRegistros.refreshData()
     End Sub
 
     Public Sub refreshConsumersData()
-        openFormInPanel(New tableFormConsumers)
+        openFormInPanel(New tableFormPapelera)
     End Sub
 
     Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click

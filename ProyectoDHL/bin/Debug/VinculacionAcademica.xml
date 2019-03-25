@@ -87,6 +87,11 @@ VinculacionAcademica
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoDHL.My.Resources.Resources.logo_ceutec">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoDHL.My.Resources.Resources.logo_ceutec_blanco">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
