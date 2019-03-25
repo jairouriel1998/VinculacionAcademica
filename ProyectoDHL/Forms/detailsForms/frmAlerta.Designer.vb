@@ -134,9 +134,9 @@ Partial Class frmAlerta
         Me.btnClose.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClose.Location = New System.Drawing.Point(133, 2)
+        Me.btnClose.Location = New System.Drawing.Point(133, 3)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(96, 40)
+        Me.btnClose.Size = New System.Drawing.Size(96, 36)
         Me.btnClose.TabIndex = 10
         Me.btnClose.Text = "Cerrar"
         Me.btnClose.UseVisualStyleBackColor = False

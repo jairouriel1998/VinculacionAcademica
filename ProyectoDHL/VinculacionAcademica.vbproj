@@ -72,6 +72,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -99,6 +100,12 @@
       <DependentUpon>detailsFormAlumnos.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\detailsForms\detailsFormAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\detailsForms\formExport.Designer.vb">
+      <DependentUpon>formExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\detailsForms\formExport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\detailsForms\frmAlerta.Designer.vb">
@@ -173,6 +180,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\detailsForms\detailsFormAlumnos.resx">
       <DependentUpon>detailsFormAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\detailsForms\formExport.resx">
+      <DependentUpon>formExport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\detailsForms\frmAlerta.resx">
       <DependentUpon>frmAlerta.vb</DependentUpon>
@@ -312,6 +322,35 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

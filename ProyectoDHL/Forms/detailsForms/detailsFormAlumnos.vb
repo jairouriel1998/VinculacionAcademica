@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+
 Public Class detailsFormAlumnos
     Dim newAlumno, editAlumno, viewAlumno As Boolean
     Dim registroActual As New eAlumnos

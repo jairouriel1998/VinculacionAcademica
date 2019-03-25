@@ -17,3 +17,5 @@ C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\VinculacionA
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\VinculacionAcademica.vbprojAssemblyReference.cache
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\ProyectoDHL.frmAlerta.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\ProyectoDHL.tableFormPapelera.resources
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\VinculacionAcademica.vbproj.ResolveComReference.cache
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Debug\ProyectoDHL.formExport.resources

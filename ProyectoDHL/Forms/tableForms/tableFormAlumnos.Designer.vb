@@ -30,7 +30,6 @@ Partial Class tableFormAlumnos
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(tableFormAlumnos))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnExitForm = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtVinculadas = New System.Windows.Forms.TextBox()
@@ -49,6 +48,8 @@ Partial Class tableFormAlumnos
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
         Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
+        Me.btnExitForm = New System.Windows.Forms.Button()
+        Me.btnExportar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -68,22 +69,6 @@ Partial Class tableFormAlumnos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(833, 55)
         Me.Panel1.TabIndex = 0
-        '
-        'btnExitForm
-        '
-        Me.btnExitForm.BackColor = System.Drawing.Color.DarkGray
-        Me.btnExitForm.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExitForm.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnExitForm.FlatAppearance.BorderSize = 0
-        Me.btnExitForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExitForm.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnExitForm.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnExitForm.Location = New System.Drawing.Point(0, 0)
-        Me.btnExitForm.Name = "btnExitForm"
-        Me.btnExitForm.Size = New System.Drawing.Size(68, 55)
-        Me.btnExitForm.TabIndex = 3
-        Me.btnExitForm.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -137,6 +122,7 @@ Partial Class tableFormAlumnos
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel3.Controls.Add(Me.btnExportar)
         Me.Panel3.Controls.Add(Me.btnClear)
         Me.Panel3.Controls.Add(Me.btnBuscar)
         Me.Panel3.Controls.Add(Me.txtBusqueda)
@@ -374,6 +360,40 @@ Partial Class tableFormAlumnos
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
         '
+        'btnExitForm
+        '
+        Me.btnExitForm.BackColor = System.Drawing.Color.DarkGray
+        Me.btnExitForm.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExitForm.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnExitForm.FlatAppearance.BorderSize = 0
+        Me.btnExitForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExitForm.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnExitForm.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnExitForm.Location = New System.Drawing.Point(0, 0)
+        Me.btnExitForm.Name = "btnExitForm"
+        Me.btnExitForm.Size = New System.Drawing.Size(68, 55)
+        Me.btnExitForm.TabIndex = 3
+        Me.btnExitForm.UseVisualStyleBackColor = False
+        '
+        'btnExportar
+        '
+        Me.btnExportar.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExportar.FlatAppearance.BorderSize = 0
+        Me.btnExportar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue
+        Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportar.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExportar.Location = New System.Drawing.Point(0, 410)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(200, 40)
+        Me.btnExportar.TabIndex = 33
+        Me.btnExportar.Text = "Exportar A Excel"
+        Me.btnExportar.UseVisualStyleBackColor = False
+        '
         'tableFormAlumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -421,4 +441,5 @@ Partial Class tableFormAlumnos
     Friend WithEvents btnClear As Button
     Friend WithEvents txtVinculadas As TextBox
     Friend WithEvents labVinculadas As Label
+    Friend WithEvents btnExportar As Button
 End Class

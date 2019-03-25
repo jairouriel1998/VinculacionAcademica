@@ -198,4 +198,10 @@
     Public Sub vaciarPapelera()
         Me.AlumnosTableAdapter.eliminacionSeccionada(False)
     End Sub
+
+    Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
+        Dim exportacionForm As New formExport
+        exportacionForm.obtenerGrid(datalistAlumnos)
+        exportacionForm.Show()
+    End Sub
 End Class
