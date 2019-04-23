@@ -323,6 +323,7 @@
         btnAddNewAlumno.Visible = False
         btnEditAlumno.Visible = False
         txtBusqueda.Text = ""
+        btnCancel.Visible = True
     End Sub
 
     Public Sub desactivarEdicion()
@@ -459,5 +460,11 @@
         'alerta.setText("No hay nada que mostrar")
         'alerta.Show()
         'End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        btnCancel.Visible = False
+        desactivarEdicion()
+        refreshData()
     End Sub
 End Class

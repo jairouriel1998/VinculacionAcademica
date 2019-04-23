@@ -79,6 +79,7 @@ Partial Class tableFormAlumnos
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
         Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -171,6 +172,7 @@ Partial Class tableFormAlumnos
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel3.Controls.Add(Me.btnCancel)
         Me.Panel3.Controls.Add(Me.btnSaveNew)
         Me.Panel3.Controls.Add(Me.btnExportar)
         Me.Panel3.Controls.Add(Me.btnClear)
@@ -816,6 +818,25 @@ Partial Class tableFormAlumnos
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
         '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Lato", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancel.Location = New System.Drawing.Point(0, 223)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(200, 41)
+        Me.btnCancel.TabIndex = 35
+        Me.btnCancel.Text = "Cancelar"
+        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.btnCancel.Visible = False
+        '
         'tableFormAlumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -898,4 +919,5 @@ Partial Class tableFormAlumnos
     Friend WithEvents txtEvaluacion As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents btnSaveNew As Button
+    Friend WithEvents btnCancel As Button
 End Class
