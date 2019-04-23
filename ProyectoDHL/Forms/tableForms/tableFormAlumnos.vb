@@ -343,33 +343,7 @@
         btnSave.Visible = False
         btnEditAlumno.Visible = True
         btnAddNewAlumno.Visible = True
-    End Sub
-
-    'Metodos para impacto en la base de datos llamados desde otros formularios
-    'Hice estos metodos aquí porque no construí un controlador para eso xD que debería estar en la carpeta Data
-
-    Public Function extraerEliminados() As DataTable
-        tabla = Me.AlumnosTableAdapter.GetData(False)
-        Return tabla
-    End Function
-
-    Public Sub restaurarRegistro(ByRef id_Registro As Integer)
-        Me.AlumnosTableAdapter.ActivoRegistro(True, id_Registro)
-    End Sub
-
-    Public Sub eliminarRegistro(ByRef id_Registro As Integer)
-        Me.AlumnosTableAdapter.EliminarRegistro(id_Registro)
-    End Sub
-
-    Public Sub vaciarPapelera()
-        Me.AlumnosTableAdapter.eliminacionSeccionada(False)
-    End Sub
-
-    Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
-        desactivarEdicion()
-        Dim exportacionForm As New formExport
-        exportacionForm.obtenerGrid(datalistAlumnos)
-        exportacionForm.Show()
+        btnCancel.Visible = False
     End Sub
 
     Private Sub btnSaveNew_Click(sender As Object, e As EventArgs) Handles btnSaveNew.Click
@@ -439,7 +413,7 @@
                 'End If
                 'End If
             Else
-                    Dim alerta As frmAlerta = New frmAlerta
+                Dim alerta As frmAlerta = New frmAlerta
                 alerta.setText("ERROR!" + vbLf + "Se ha ingresado texto en campos numéricos." + vbLf + vbLf + " No se han guardado los cambios.")
                 alerta.Show()
             End If
@@ -462,9 +436,37 @@
         'End If
     End Sub
 
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        btnCancel.Visible = False
         desactivarEdicion()
         refreshData()
     End Sub
+
+    'Metodos para impacto en la base de datos llamados desde otros formularios
+    'Hice estos metodos aquí porque no construí un controlador para eso xD que debería estar en la carpeta Data
+
+    Public Function extraerEliminados() As DataTable
+        tabla = Me.AlumnosTableAdapter.GetData(False)
+        Return tabla
+    End Function
+
+    Public Sub restaurarRegistro(ByRef id_Registro As Integer)
+        Me.AlumnosTableAdapter.ActivoRegistro(True, id_Registro)
+    End Sub
+
+    Public Sub eliminarRegistro(ByRef id_Registro As Integer)
+        Me.AlumnosTableAdapter.EliminarRegistro(id_Registro)
+    End Sub
+
+    Public Sub vaciarPapelera()
+        Me.AlumnosTableAdapter.eliminacionSeccionada(False)
+    End Sub
+
+    Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
+        desactivarEdicion()
+        Dim exportacionForm As New formExport
+        exportacionForm.obtenerGrid(datalistAlumnos)
+        exportacionForm.Show()
+    End Sub
+
 End Class
