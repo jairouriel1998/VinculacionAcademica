@@ -6,7 +6,6 @@ C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\bin\Release\Vinculacio
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.detailsFormAlumnos.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.frmAbout.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.frmStart.resources
-C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.tableFormConsumers.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.tableFormAlumnos.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.MainForm.resources
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.Resources.resources
@@ -17,3 +16,6 @@ C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\Vinculacio
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.pdb
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.vbprojAssemblyReference.cache
 C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.frmAlerta.resources
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\VinculacionAcademica.vbproj.ResolveComReference.cache
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.formExport.resources
+C:\Users\nancy\Downloads\VinculacionAcademica\ProyectoDHL\obj\Release\ProyectoDHL.tableFormPapelera.resources

@@ -84,13 +84,13 @@ Partial Class MainForm
         'Label1
         '
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Impact", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(525, 40)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "  Control De Vinculación Académica"
+        Me.Label1.Text = "Control de vinculación académica"
         '
         'btnMinimize
         '
@@ -207,7 +207,7 @@ Partial Class MainForm
         Me.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAbout.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbout.Font = New System.Drawing.Font("Lato Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAbout.ForeColor = System.Drawing.Color.White
         Me.btnAbout.Image = Global.ProyectoDHL.My.Resources.Resources.empleados
         Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -225,7 +225,7 @@ Partial Class MainForm
         Me.btnFormEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnFormEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnFormEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFormEmpleados.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFormEmpleados.Font = New System.Drawing.Font("Lato Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFormEmpleados.ForeColor = System.Drawing.Color.White
         Me.btnFormEmpleados.Image = Global.ProyectoDHL.My.Resources.Resources.clientes
         Me.btnFormEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -243,7 +243,7 @@ Partial Class MainForm
         Me.btnFormClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnFormClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.btnFormClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFormClientes.Font = New System.Drawing.Font("Impact", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFormClientes.Font = New System.Drawing.Font("Lato Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFormClientes.ForeColor = System.Drawing.Color.White
         Me.btnFormClientes.Image = Global.ProyectoDHL.My.Resources.Resources.Icono_Restaurar
         Me.btnFormClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft

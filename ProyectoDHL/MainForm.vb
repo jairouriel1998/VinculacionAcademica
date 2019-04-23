@@ -102,4 +102,5 @@ Public Class MainForm
     Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
         openFormInPanel(New frmAbout)
     End Sub
+
 End Class
