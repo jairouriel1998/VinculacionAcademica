@@ -27,17 +27,21 @@
         datalistAlumnos.Columns(0).Visible = False
         datalistAlumnos.Columns(12).Visible = False
         datalistAlumnos.Columns(13).Visible = False
+        datalistAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        datalistAlumnos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         If datalistAlumnos.Rows.Count = 0 Then
             Dim emptyDataTable As New DataTable
-            emptyDataTable.Columns.Add("dataEmpty")
+            emptyDataTable.Columns.Add("Vacio")
             Dim emptyRow As DataRow = emptyDataTable.NewRow()
-            emptyRow("dataEmpty") = "No hay datos"
+            emptyRow("Vacio") = "No hay datos"
             emptyDataTable.Rows.Add(emptyRow)
             datalistAlumnos.DataSource = emptyDataTable
             btnDeleteAlumno.Visible = False
             btnEditAlumno.Visible = False
             btnSave.Visible = False
             btnSaveNew.Visible = False
+            datalistAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            datalistAlumnos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders
         End If
     End Sub
 
@@ -93,20 +97,10 @@
             registroActual.Observaciones1 = txtObservaciones.Text
 
             If errores = False Then
-                'If newAlumno Then
-                'Dim newPeticion As Integer = MessageBox.Show("¿Desea guardar el nuevo registro?", "", MessageBoxButtons.YesNo)
-                'If newPeticion = DialogResult.Yes Then
-                'nuevosDatos(registroActual)
-                'MainForm.formTablaRegistros.refreshData()
-                'Me.Close()
-                'End If
-
-                'ElseIf editAlumno Then
                 Dim newPeticion As Integer = MessageBox.Show("¿Desea guardar los cambios realizados?", "", MessageBoxButtons.YesNo)
                 If newPeticion = DialogResult.Yes Then
                     edicionDatos(registroActual)
                 End If
-                'End If
             Else
                 Dim alerta As frmAlerta = New frmAlerta
                 alerta.setText("ERROR!" + vbLf + "Se ha ingresado texto en campos numéricos." + vbLf + vbLf + " No se han guardado los cambios.")
@@ -117,18 +111,6 @@
             alerta.setText("Se necesitan los campos: número de cuenta, el nombre del estudiante, el nombre del proyecto y las horas vinculadas para poder guardar el nuevo registro.")
             alerta.Show()
         End If
-        'Dim detailsAlumno = New detailsFormAlumnos
-        'detailsAlumno.prepareForm(False, False, True)
-        'Dim datos As eAlumnos = New eAlumnos
-        'datos = sendData()
-        'If datos.Id1 <> 0 Then
-        ' detailsAlumno.reciveData(datos)
-        'detailsAlumno.Show()
-        'Else
-        'Dim alerta As frmAlerta = New frmAlerta
-        'alerta.setText("No hay nada que mostrar")
-        'alerta.Show()
-        'End If
     End Sub
 
     Function sendData() As eAlumnos
@@ -183,11 +165,6 @@
         activarEdicion()
         btnSaveNew.Text = "Guardar"
         btnSaveNew.Visible = True
-        'newAlumno = True
-        'editAlumno = False
-        'Dim detailsEmployee = New detailsFormAlumnos
-        'detailsEmployee.prepareForm(True, False, False)
-        'detailsEmployee.Show()
     End Sub
 
     Private Sub btnEditAlumno_Click(sender As Object, e As EventArgs) Handles btnEditAlumno.Click
@@ -197,11 +174,6 @@
         btnSaveNew.Text = "Guardar como nuevo"
         btnSave.Visible = True
         btnSaveNew.Visible = True
-
-        'Dim detailsEmployee = New detailsFormAlumnos
-        'detailsEmployee.prepareForm(False, True, False)
-        'detailsEmployee.reciveData(sendData())
-        'detailsEmployee.Show()
     End Sub
 
     Private Sub btnDeleteAlumno_Click(sender As Object, e As EventArgs) Handles btnDeleteAlumno.Click
@@ -398,20 +370,10 @@
             registroActual.Observaciones1 = txtObservaciones.Text
 
             If errores = False Then
-                'If newAlumno Then
                 Dim newPeticion As Integer = MessageBox.Show("¿Desea guardar el nuevo registro?", "", MessageBoxButtons.YesNo)
                 If newPeticion = DialogResult.Yes Then
                     nuevosDatos(registroActual)
                 End If
-
-                'ElseIf editAlumno Then
-                'Dim newPeticion As Integer = MessageBox.Show("¿Desea guardar los cambios realizados?", "", MessageBoxButtons.YesNo)
-                'If newPeticion = DialogResult.Yes Then
-                'edicionDatos(registroActual)
-                'MainForm.formTablaRegistros.refreshData()
-                'Me.Close()
-                'End If
-                'End If
             Else
                 Dim alerta As frmAlerta = New frmAlerta
                 alerta.setText("ERROR!" + vbLf + "Se ha ingresado texto en campos numéricos." + vbLf + vbLf + " No se han guardado los cambios.")
@@ -422,18 +384,6 @@
             alerta.setText("Se necesitan los campos: número de cuenta, el nombre del estudiante, el nombre del proyecto y las horas vinculadas para poder guardar el nuevo registro.")
             alerta.Show()
         End If
-        'Dim detailsAlumno = New detailsFormAlumnos
-        'detailsAlumno.prepareForm(False, False, True)
-        'Dim datos As eAlumnos = New eAlumnos
-        'datos = sendData()
-        'If datos.Id1 <> 0 Then
-        ' detailsAlumno.reciveData(datos)
-        'detailsAlumno.Show()
-        'Else
-        'Dim alerta As frmAlerta = New frmAlerta
-        'alerta.setText("No hay nada que mostrar")
-        'alerta.Show()
-        'End If
     End Sub
 
 

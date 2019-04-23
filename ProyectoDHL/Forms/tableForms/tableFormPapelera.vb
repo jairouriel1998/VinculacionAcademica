@@ -26,6 +26,8 @@
         datalistEliminados.Columns(0).Visible = False
         datalistEliminados.Columns(12).Visible = False
         datalistEliminados.Columns(13).Visible = False
+        datalistEliminados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        datalistEliminados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         If tabla.Rows.Count = 0 Then
             Dim emptyDataTable As New DataTable
             emptyDataTable.Columns.Add("Vacio")
@@ -37,6 +39,8 @@
             btnEliminarDelTodo.Visible = False
             btnVerDetalles.Visible = False
             btnRestaurarRegistro.Visible = False
+            datalistEliminados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            datalistEliminados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders
         Else
             btnVaciarPapelera.Visible = True
             btnEliminarDelTodo.Visible = True

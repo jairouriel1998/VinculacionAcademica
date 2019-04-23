@@ -76,10 +76,10 @@ Partial Class tableFormAlumnos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCuenta = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
         Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -131,7 +131,7 @@ Partial Class tableFormAlumnos
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(691, 42)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "REGISTROS"
+        Me.Label1.Text = "REGISTROS TGU"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
@@ -804,20 +804,6 @@ Partial Class tableFormAlumnos
         Me.Label3.TabIndex = 100
         Me.Label3.Text = "Cuenta"
         '
-        'AlumnosBindingSource
-        '
-        Me.AlumnosBindingSource.DataMember = "Alumnos"
-        Me.AlumnosBindingSource.DataSource = Me.VinculacionAcademicaPT_TGU_DBDataSet1
-        '
-        'VinculacionAcademicaPT_TGU_DBDataSet1
-        '
-        Me.VinculacionAcademicaPT_TGU_DBDataSet1.DataSetName = "VinculacionAcademicaPT_TGU_DBDataSet1"
-        Me.VinculacionAcademicaPT_TGU_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AlumnosTableAdapter
-        '
-        Me.AlumnosTableAdapter.ClearBeforeFill = True
-        '
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke
@@ -836,6 +822,20 @@ Partial Class tableFormAlumnos
         Me.btnCancel.Text = "Cancelar"
         Me.btnCancel.UseVisualStyleBackColor = False
         Me.btnCancel.Visible = False
+        '
+        'AlumnosBindingSource
+        '
+        Me.AlumnosBindingSource.DataMember = "Alumnos"
+        Me.AlumnosBindingSource.DataSource = Me.VinculacionAcademicaPT_TGU_DBDataSet1
+        '
+        'VinculacionAcademicaPT_TGU_DBDataSet1
+        '
+        Me.VinculacionAcademicaPT_TGU_DBDataSet1.DataSetName = "VinculacionAcademicaPT_TGU_DBDataSet1"
+        Me.VinculacionAcademicaPT_TGU_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AlumnosTableAdapter
+        '
+        Me.AlumnosTableAdapter.ClearBeforeFill = True
         '
         'tableFormAlumnos
         '

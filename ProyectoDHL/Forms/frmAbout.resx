@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Sistema de control de horas de vinculación  académica.
+    <value>Sistema de control de horas de vinculación académica.
 
 Creado sin fines de lucro y destinado para el apoyo
 de los Programas Técnicos Universitarios de CEUTEC
 
 Desarrollado por: Jairo U. Medrano
 Contacto: jairouriel1998@gmail.com
+
+Tegucigalpa M.D.C  |  2019
+
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

@@ -198,8 +198,8 @@ Partial Class tableFormPapelera
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
         Me.datalistEliminados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.datalistEliminados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.datalistEliminados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
+        Me.datalistEliminados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.datalistEliminados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.datalistEliminados.BackgroundColor = System.Drawing.Color.White
         Me.datalistEliminados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -241,11 +241,12 @@ Partial Class tableFormPapelera
         Me.datalistEliminados.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.datalistEliminados.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         Me.datalistEliminados.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
-        Me.datalistEliminados.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.datalistEliminados.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Lato Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.datalistEliminados.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.datalistEliminados.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.MediumTurquoise
         Me.datalistEliminados.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.datalistEliminados.RowTemplate.Height = 30
+        Me.datalistEliminados.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.datalistEliminados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.datalistEliminados.Size = New System.Drawing.Size(670, 431)
         Me.datalistEliminados.TabIndex = 1
