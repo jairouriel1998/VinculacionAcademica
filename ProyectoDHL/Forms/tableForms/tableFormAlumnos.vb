@@ -2,6 +2,7 @@
     Private tabla As New DataTable
 
     Dim registroActual As New eAlumnos
+    Dim sinRegistros As Boolean = False
 
     Private Sub btnExitForm_Click(sender As Object, e As EventArgs) Handles btnExitForm.Click
         MainForm.reintegrateForm()
@@ -24,11 +25,6 @@
     Private Sub mostrar()
         datalistAlumnos.DataSource = tabla
         datalistAlumnos.ColumnHeadersVisible = True
-        datalistAlumnos.Columns(0).Visible = False
-        datalistAlumnos.Columns(12).Visible = False
-        datalistAlumnos.Columns(13).Visible = False
-        datalistAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        datalistAlumnos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         If datalistAlumnos.Rows.Count = 0 Then
             Dim emptyDataTable As New DataTable
             emptyDataTable.Columns.Add("Vacio")
@@ -38,10 +34,20 @@
             datalistAlumnos.DataSource = emptyDataTable
             btnDeleteAlumno.Visible = False
             btnEditAlumno.Visible = False
-            btnSave.Visible = False
-            btnSaveNew.Visible = False
+            btnExportar.Visible = False
             datalistAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             datalistAlumnos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders
+            sinRegistros = True
+        ElseIf datalistAlumnos.Rows.Count > 0 Then
+            datalistAlumnos.Columns(0).Visible = False
+            datalistAlumnos.Columns(12).Visible = False
+            datalistAlumnos.Columns(13).Visible = False
+            datalistAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            datalistAlumnos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+            btnDeleteAlumno.Visible = True
+            btnExportar.Visible = True
+            btnEditAlumno.Visible = True
+            sinRegistros = False
         End If
     End Sub
 
@@ -243,24 +249,27 @@
             txtObservaciones.Text = ""
         Else
             Try
-                txtBusqueda.Text = datalistAlumnos.SelectedCells.Item(1).Value
-                txtCuenta.Text = datalistAlumnos.SelectedCells.Item(1).Value
-                txtNombre.Text = datalistAlumnos.SelectedCells.Item(2).Value
-                txtProyecto.Text = datalistAlumnos.SelectedCells.Item(3).Value
-                txtBeneficiado.Text = datalistAlumnos.SelectedCells.Item(4).Value
-                txtEvaluador.Text = datalistAlumnos.SelectedCells.Item(5).Value
-                txtHoras.Text = datalistAlumnos.SelectedCells.Item(6).Value
-                txtEvaluacion.Text = datalistAlumnos.SelectedCells.Item(7).Value
-                txtPeriodo.Text = datalistAlumnos.SelectedCells.Item(8).Value
-                txtValor.Text = datalistAlumnos.SelectedCells.Item(9).Value
-                txtAsignatura.Text = datalistAlumnos.SelectedCells.Item(10).Value
-                txtCarrera.Text = datalistAlumnos.SelectedCells.Item(11).Value
+                txtBusqueda.Text = datalistAlumnos.SelectedCells.Item(1).Value & ""
+                txtCuenta.Text = datalistAlumnos.SelectedCells.Item(1).Value & ""
+                txtNombre.Text = datalistAlumnos.SelectedCells.Item(2).Value & ""
+                txtProyecto.Text = datalistAlumnos.SelectedCells.Item(3).Value & ""
+                txtBeneficiado.Text = datalistAlumnos.SelectedCells.Item(4).Value & ""
+                txtEvaluador.Text = datalistAlumnos.SelectedCells.Item(5).Value & ""
+                txtHoras.Text = datalistAlumnos.SelectedCells.Item(6).Value & ""
+                txtEvaluacion.Text = datalistAlumnos.SelectedCells.Item(7).Value & ""
+                txtPeriodo.Text = datalistAlumnos.SelectedCells.Item(8).Value & ""
+                txtValor.Text = datalistAlumnos.SelectedCells.Item(9).Value & ""
+                txtAsignatura.Text = datalistAlumnos.SelectedCells.Item(10).Value & ""
+                txtCarrera.Text = datalistAlumnos.SelectedCells.Item(11).Value & ""
                 txtObservaciones.Text = datalistAlumnos.SelectedCells.Item(12).Value & ""
             Catch ex As Exception
 
             End Try
         End If
         desactivarEdicion()
+        If sinRegistros Then
+            btnEditAlumno.Visible = False
+        End If
     End Sub
 
     Public Sub edicionDatos(ByRef datos As eAlumnos)

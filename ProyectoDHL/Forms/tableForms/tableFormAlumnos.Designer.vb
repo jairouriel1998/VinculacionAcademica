@@ -36,6 +36,7 @@ Partial Class tableFormAlumnos
         Me.txtVinculadas = New System.Windows.Forms.TextBox()
         Me.labVinculadas = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSaveNew = New System.Windows.Forms.Button()
         Me.btnExportar = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -76,7 +77,6 @@ Partial Class tableFormAlumnos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCuenta = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VinculacionAcademicaPT_TGU_DBDataSet1 = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1()
         Me.AlumnosTableAdapter = New ProyectoDHL.VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters.AlumnosTableAdapter()
@@ -188,6 +188,25 @@ Partial Class tableFormAlumnos
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(200, 478)
         Me.Panel3.TabIndex = 2
+        '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Lato", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancel.Location = New System.Drawing.Point(0, 223)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(200, 41)
+        Me.btnCancel.TabIndex = 35
+        Me.btnCancel.Text = "Cancelar"
+        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.btnCancel.Visible = False
         '
         'btnSaveNew
         '
@@ -320,6 +339,7 @@ Partial Class tableFormAlumnos
         Me.btnEditAlumno.TabIndex = 6
         Me.btnEditAlumno.Text = "Editar"
         Me.btnEditAlumno.UseVisualStyleBackColor = False
+        Me.btnEditAlumno.Visible = False
         '
         'btnAddNewAlumno
         '
@@ -515,11 +535,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.Location = New System.Drawing.Point(326, 144)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(93, 16)
+        Me.Label13.Size = New System.Drawing.Size(96, 14)
         Me.Label13.TabIndex = 158
         Me.Label13.Text = "Observaciones"
         '
@@ -542,11 +562,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(326, 117)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(53, 16)
+        Me.Label12.Size = New System.Drawing.Size(52, 14)
         Me.Label12.TabIndex = 156
         Me.Label12.Text = "Carrera"
         '
@@ -569,11 +589,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(326, 89)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(71, 16)
+        Me.Label11.Size = New System.Drawing.Size(71, 14)
         Me.Label11.TabIndex = 154
         Me.Label11.Text = "Asignatura"
         '
@@ -596,11 +616,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(326, 61)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(38, 16)
+        Me.Label10.Size = New System.Drawing.Size(37, 14)
         Me.Label10.TabIndex = 152
         Me.Label10.Text = "Valor"
         '
@@ -623,11 +643,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(326, 35)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 16)
+        Me.Label9.Size = New System.Drawing.Size(52, 14)
         Me.Label9.TabIndex = 150
         Me.Label9.Text = "Periodo"
         '
@@ -650,11 +670,11 @@ Partial Class tableFormAlumnos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(326, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(69, 16)
+        Me.Label8.Size = New System.Drawing.Size(70, 14)
         Me.Label8.TabIndex = 148
         Me.Label8.Text = "Evaluacion"
         '
@@ -664,21 +684,21 @@ Partial Class tableFormAlumnos
         Me.txtHoras.BackColor = System.Drawing.Color.White
         Me.txtHoras.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoras.ForeColor = System.Drawing.Color.Black
-        Me.txtHoras.Location = New System.Drawing.Point(74, 196)
+        Me.txtHoras.Location = New System.Drawing.Point(81, 196)
         Me.txtHoras.Name = "txtHoras"
         Me.txtHoras.ReadOnly = True
-        Me.txtHoras.Size = New System.Drawing.Size(241, 23)
+        Me.txtHoras.Size = New System.Drawing.Size(234, 23)
         Me.txtHoras.TabIndex = 111
         Me.txtHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(4, 199)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 16)
+        Me.Label7.Size = New System.Drawing.Size(42, 14)
         Me.Label7.TabIndex = 110
         Me.Label7.Text = "Horas"
         '
@@ -688,21 +708,21 @@ Partial Class tableFormAlumnos
         Me.txtEvaluador.BackColor = System.Drawing.Color.White
         Me.txtEvaluador.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEvaluador.ForeColor = System.Drawing.Color.Black
-        Me.txtEvaluador.Location = New System.Drawing.Point(74, 171)
+        Me.txtEvaluador.Location = New System.Drawing.Point(81, 171)
         Me.txtEvaluador.Name = "txtEvaluador"
         Me.txtEvaluador.ReadOnly = True
-        Me.txtEvaluador.Size = New System.Drawing.Size(241, 23)
+        Me.txtEvaluador.Size = New System.Drawing.Size(234, 23)
         Me.txtEvaluador.TabIndex = 109
         Me.txtEvaluador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(4, 174)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 16)
+        Me.Label6.Size = New System.Drawing.Size(66, 14)
         Me.Label6.TabIndex = 108
         Me.Label6.Text = "Evaluador"
         '
@@ -712,22 +732,22 @@ Partial Class tableFormAlumnos
         Me.txtBeneficiado.BackColor = System.Drawing.Color.White
         Me.txtBeneficiado.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBeneficiado.ForeColor = System.Drawing.Color.Black
-        Me.txtBeneficiado.Location = New System.Drawing.Point(74, 117)
+        Me.txtBeneficiado.Location = New System.Drawing.Point(81, 117)
         Me.txtBeneficiado.Multiline = True
         Me.txtBeneficiado.Name = "txtBeneficiado"
         Me.txtBeneficiado.ReadOnly = True
-        Me.txtBeneficiado.Size = New System.Drawing.Size(241, 49)
+        Me.txtBeneficiado.Size = New System.Drawing.Size(234, 49)
         Me.txtBeneficiado.TabIndex = 107
         Me.txtBeneficiado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(4, 117)
+        Me.Label5.Location = New System.Drawing.Point(4, 130)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 16)
+        Me.Label5.Size = New System.Drawing.Size(76, 14)
         Me.Label5.TabIndex = 106
         Me.Label5.Text = "Beneficiado"
         '
@@ -737,22 +757,22 @@ Partial Class tableFormAlumnos
         Me.txtProyecto.BackColor = System.Drawing.Color.White
         Me.txtProyecto.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProyecto.ForeColor = System.Drawing.Color.Black
-        Me.txtProyecto.Location = New System.Drawing.Point(74, 58)
+        Me.txtProyecto.Location = New System.Drawing.Point(81, 58)
         Me.txtProyecto.Multiline = True
         Me.txtProyecto.Name = "txtProyecto"
         Me.txtProyecto.ReadOnly = True
-        Me.txtProyecto.Size = New System.Drawing.Size(241, 52)
+        Me.txtProyecto.Size = New System.Drawing.Size(234, 52)
         Me.txtProyecto.TabIndex = 105
         Me.txtProyecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(4, 62)
+        Me.Label4.Location = New System.Drawing.Point(4, 78)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 16)
+        Me.Label4.Size = New System.Drawing.Size(59, 14)
         Me.Label4.TabIndex = 104
         Me.Label4.Text = "Proyecto"
         '
@@ -762,21 +782,21 @@ Partial Class tableFormAlumnos
         Me.txtNombre.BackColor = System.Drawing.Color.White
         Me.txtNombre.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.Black
-        Me.txtNombre.Location = New System.Drawing.Point(74, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(81, 30)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(241, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(234, 23)
         Me.txtNombre.TabIndex = 103
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(4, 30)
+        Me.Label2.Location = New System.Drawing.Point(4, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 16)
+        Me.Label2.Size = New System.Drawing.Size(51, 14)
         Me.Label2.TabIndex = 102
         Me.Label2.Text = "Alumno"
         '
@@ -786,42 +806,23 @@ Partial Class tableFormAlumnos
         Me.txtCuenta.BackColor = System.Drawing.Color.White
         Me.txtCuenta.Font = New System.Drawing.Font("Lato", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCuenta.ForeColor = System.Drawing.Color.Black
-        Me.txtCuenta.Location = New System.Drawing.Point(74, 3)
+        Me.txtCuenta.Location = New System.Drawing.Point(81, 3)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.Size = New System.Drawing.Size(241, 23)
+        Me.txtCuenta.Size = New System.Drawing.Size(234, 23)
         Me.txtCuenta.TabIndex = 101
         Me.txtCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lato Semibold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(4, 6)
+        Me.Label3.Location = New System.Drawing.Point(4, 8)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(50, 16)
+        Me.Label3.Size = New System.Drawing.Size(48, 14)
         Me.Label3.TabIndex = 100
         Me.Label3.Text = "Cuenta"
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Lato", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancel.Location = New System.Drawing.Point(0, 223)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(200, 41)
-        Me.btnCancel.TabIndex = 35
-        Me.btnCancel.Text = "Cancelar"
-        Me.btnCancel.UseVisualStyleBackColor = False
-        Me.btnCancel.Visible = False
         '
         'AlumnosBindingSource
         '
