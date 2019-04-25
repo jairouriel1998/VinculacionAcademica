@@ -1414,7 +1414,7 @@ Namespace VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters
             Me._commandCollection(0).CommandText = "SELECT        Id, Cuenta, [Nombre Completo], [Nombre del Proyecto], [Organizacion"& _ 
                 " Beneficiada], Catedratico, [Horas Invertidas], Evaluacion, Periodo, [Valor Econ"& _ 
                 "omico], Asignatura, Carrera, Observaciones, Activo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Alumnos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHE"& _ 
-                "RE        (Activo = ?)"
+                "RE        (Activo = ?)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Id DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Activo", Global.System.Data.OleDb.OleDbType.[Boolean], 2, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Activo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
@@ -1456,9 +1456,10 @@ Namespace VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "SELECT Activo, Asignatura, Carrera, Catedratico, Cuenta, Evaluacion, [Horas Inver"& _ 
-                "tidas], Id, [Nombre Completo], [Nombre del Proyecto], Observaciones, [Organizaci"& _ 
-                "on Beneficiada], Periodo, [Valor Economico] FROM Alumnos WHERE (Cuenta = ?)"
+            Me._commandCollection(5).CommandText = "SELECT        Activo, Asignatura, Carrera, Catedratico, Cuenta, Evaluacion, [Hora"& _ 
+                "s Invertidas], Id, [Nombre Completo], [Nombre del Proyecto], Observaciones, [Org"& _ 
+                "anizacion Beneficiada], Periodo, [Valor Economico]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Alumnos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHE"& _ 
+                "RE        (Cuenta = ?)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Id DESC"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cuenta", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuenta", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6) = New Global.System.Data.OleDb.OleDbCommand()
@@ -1561,9 +1562,13 @@ Namespace VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function ActivoRegistro(ByVal Activo As Boolean, ByVal Original_Id As Integer) As Integer
+        Public Overloads Overridable Function ActivoRegistro(ByVal Activo As Global.System.Nullable(Of Boolean), ByVal Original_Id As Integer) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(Activo,Boolean)
+            If (Activo.HasValue = true) Then
+                command.Parameters(0).Value = CType(Activo.Value,Boolean)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             command.Parameters(1).Value = CType(Original_Id,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1668,9 +1673,13 @@ Namespace VinculacionAcademicaPT_TGU_DBDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
-        Public Overloads Overridable Function eliminacionSeccionada(ByVal Activo As Boolean) As Integer
+        Public Overloads Overridable Function eliminacionSeccionada(ByVal Activo As Global.System.Nullable(Of Boolean)) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
-            command.Parameters(0).Value = CType(Activo,Boolean)
+            If (Activo.HasValue = true) Then
+                command.Parameters(0).Value = CType(Activo.Value,Boolean)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
